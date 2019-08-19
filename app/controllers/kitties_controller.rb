@@ -17,36 +17,25 @@ class KittiesController < ApplicationController
 
   def create
     @kitty = Kitty.new(kitty_params)
-
-    respond_to do |format|
-      if @kitty.save
-        format.html { redirect_to @kitty, notice: 'Kitty was successfully created.' }
-        format.json { render :show, status: :created, public_key: @kitty }
-      else
-        format.html { render :new }
-        format.json { render json: @kitty.errors, status: :unprocessable_entity }
-      end
+    if @kitty.save
+      redirect_to root_path
+    else
+      render :new
     end
   end
 
   def update
-    respond_to do |format|
-      if @kitty.update(kitty_params)
-        format.html { redirect_to @kitty, notice: 'Kitty was successfully updated.' }
-        format.json { render :show, status: :ok, public_key: @kitty }
-      else
-        format.html { render :edit }
-        format.json { render json: @kitty.errors, status: :unprocessable_entity }
-      end
+    @kitty.update(kitty_params)
+    if @kitty.save!
+      redirect_to kitty_path(@kitty)
+    else
+      render :edit
     end
   end
 
   def destroy
     @kitty.destroy
-    respond_to do |format|
-      format.html { redirect_to kitties_url, notice: 'Kitty was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+    redirect_to root_path
   end
 
   private

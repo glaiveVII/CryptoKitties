@@ -1,2 +1,5 @@
-<h1>Kitties#new</h1>
-<p>Find me in app/views/kitties/new.html.erb</p>
+<h1>New Kitty</h1>
+
+<%= render 'form', kitty: @kitty %>
+
+<%= link_to 'Back', kitties_path %>

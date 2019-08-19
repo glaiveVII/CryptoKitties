@@ -1,2 +1,15 @@
-<h1>Kitties#show</h1>
-<p>Find me in app/views/kitties/show.html.erb</p>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @kitty.first_name %>
+  <%= @kitty.last_name %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @kitty.public_key %>
+</p>
+
+<%= link_to 'Edit', edit_kitty_path(@kitty) %> |
+<%= link_to 'Back', kitties_path %>
