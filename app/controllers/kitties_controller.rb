@@ -41,7 +41,7 @@ class KittiesController < ApplicationController
   private
 
   def set_kitty
-    @kitty = Kitty.find(params[:id])
+    @kitty = Kitty.find(params[:id].to_i)
   end
 
   def kitty_params
