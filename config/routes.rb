@@ -5,5 +5,4 @@ Rails.application.routes.draw do
   resources :kitties do
     resources :bookings, only: %i[show create destroy]
   end
-  devise_for :users
 end
