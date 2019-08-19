@@ -1,15 +1,15 @@
 class KittiesController < ApplicationController
   before_action :set_kitty, only: [:show, :edit, :update, :destroy]
 
+  def new
+    @kitty = Kitty.new
+  end
+
   def index
     @kitties = Kitty.all
   end
 
   def show
-  end
-
-  def new
-    @kitty = Kitty.new
   end
 
   def edit
