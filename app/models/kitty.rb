@@ -1,0 +1,2 @@
+class Kitty < ApplicationRecord
+end
