@@ -7,7 +7,7 @@ class CreateKitties < ActiveRecord::Migration[5.2]
       t.text :bio
       t.float :price
       t.string :breed
-      t.bigint :user_owner_id
+      t.references :user, foreign_key: true
       t.boolean :available
       t.float :price_per_week
       t.string :attributes
