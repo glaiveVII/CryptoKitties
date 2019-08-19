@@ -12,6 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2019_08_19_131330) do
 
+
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -25,6 +26,7 @@ ActiveRecord::Schema.define(version: 2019_08_19_131330) do
     t.datetime "updated_at", null: false
   end
 
+  user_model
   create_table "users", force: :cascade do |t|
     t.string "nickname"
     t.string "eth_public_key"
@@ -37,4 +39,5 @@ ActiveRecord::Schema.define(version: 2019_08_19_131330) do
     t.datetime "updated_at", null: false
   end
 
+ master
 end
