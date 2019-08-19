@@ -10,9 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-kitty_model
-ActiveRecord::Schema.define(version: 2019_08_19_132340) do
-
+ActiveRecord::Schema.define(version: 2019_08_19_142640) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,9 +23,10 @@ ActiveRecord::Schema.define(version: 2019_08_19_132340) do
     t.datetime "end_date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["kitty_id"], name: "index_bookings_on_kitty_id"
+    t.index ["user_id"], name: "index_bookings_on_user_id"
   end
 
-kitty_model
   create_table "kitties", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
@@ -35,29 +34,33 @@ kitty_model
     t.text "bio"
     t.float "price"
     t.string "breed"
-    t.bigint "user_owner_id"
+    t.bigint "user_id"
     t.boolean "available"
     t.float "price_per_week"
     t.string "attributes"
     t.string "parents"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_kitties_on_user_id"
   end
 
-
-  user_model
-
   create_table "users", force: :cascade do |t|
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
     t.string "nickname"
     t.string "eth_public_key"
-    t.float "wallet_balance"
-    t.string "email"
+    t.string "wallet_balance"
     t.string "photo"
     t.string "first_name"
     t.string "last_name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-
+  add_foreign_key "bookings", "kitties"
+  add_foreign_key "bookings", "users"
+  add_foreign_key "kitties", "users"
 end
