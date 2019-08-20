@@ -1,5 +1,6 @@
 <p id="notice"><%= notice %></p>
 
+
 <p>
   <strong>Name:</strong>
   <%= @kitty.first_name %>
@@ -10,6 +11,19 @@
   <strong>Address:</strong>
   <%= @kitty.public_key %>
 </p>
+
+<br>
+<br>
+
+<div class="maint-container">
+  <div class="wrapper">
+    # gobal structure and then add all you element
+    <div class="image-kitty">
+      <img class="KittyBanner-image" src="https://img.cryptokitties.co/0x06012c8cf97bead5deae237070f9587f8e7a266d/1403605.svg" alt="Kitty #1403605 - 🧬 Gen 1 H1 Gene Swap">
+    </div>
+
+  </div>
+</div>
 
 <%= link_to 'Edit', edit_kitty_path(@kitty) %> |
 <%= link_to 'Back', kitties_path %>

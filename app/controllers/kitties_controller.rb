@@ -18,6 +18,7 @@ class KittiesController < ApplicationController
   end
 
   def create
+    authorize @kitty
     @kitty = Kitty.new(kitty_params)
     @kitty.owner = current_user
     # raise
