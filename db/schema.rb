@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_19_142640) do
+ActiveRecord::Schema.define(version: 2019_08_20_095040) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,14 +34,13 @@ ActiveRecord::Schema.define(version: 2019_08_19_142640) do
     t.text "bio"
     t.float "price"
     t.string "breed"
-    t.bigint "user_id"
     t.boolean "available"
     t.float "price_per_week"
-    t.string "attributes"
     t.string "parents"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_kitties_on_user_id"
+    t.bigint "owner_id"
+    t.index ["owner_id"], name: "index_kitties_on_owner_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -62,5 +61,5 @@ ActiveRecord::Schema.define(version: 2019_08_19_142640) do
 
   add_foreign_key "bookings", "kitties"
   add_foreign_key "bookings", "users"
-  add_foreign_key "kitties", "users"
+  add_foreign_key "kitties", "users", column: "owner_id"
 end
