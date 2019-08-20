@@ -27,17 +27,13 @@
 </div>
 
 <% if policy(@kitty).edit? %>
-  <%= link_to edit_kitty_path(@kitty) do %>
-    <button type="button" class="btn btn-danger btn-gradient button-landing sticky-bottom">Edit the KITTY</button>
-  <% end %>
+  <%= link_to "Edit the KITTY", edit_kitty_path(@kitty), :class=>"btn btn-danger btn-gradient button-landing sticky-bottom" %>
 <% end %>
 
-<%= link_to kitties_path do %>
-  <button type="button" class="btn btn-danger btn-gradient button-landing sticky-bottom">Back to all KITTY page</button>
-<% end %>
+<%= link_to "Back to all KITTY page", kitties_path, :class=>"btn btn-danger btn-gradient button-landing sticky-bottom"  %>
 
 <% if policy(@kitty).destroy? %>
-<%= link_to 'Destroy', @kitty, method: :delete, class: "btn btn-danger btn-gradient button-landing sticky-bottom", data: { confirm: 'Are you sure you want to delete this lovely kitty ???' } %>
+  <%= link_to 'Destroy', @kitty, method: :delete, class: "btn btn-danger btn-gradient button-landing sticky-bottom", data: { confirm: 'Are you sure you want to delete this lovely kitty ???' } %>
 <% end %>
 
 

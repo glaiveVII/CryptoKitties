@@ -6,12 +6,9 @@
 
 <div class="button-index">
   <% @kitties.each do |kitty| %>
-      <%= kitty.first_name %>
-      <%= link_to kitty do %>
-        <button type="button" class="btn btn-danger btn-gradient button-landing sticky-bottom">SHOW</button>
-      <% end %>
+    <%= kitty.first_name %>
+    <%= link_to "SHOW", kitty, :class=>"btn btn-danger btn-gradient button-landing sticky-bottom"%>
   <% end %>
-
 </div>
 
 
@@ -23,15 +20,10 @@
 
 
 <% if policy(Kitty).create? %>
-  <%= link_to new_kitty_path do %>
-    <button type="button" class="btn btn-danger btn-gradient button-landing sticky-bottom">NEW KITTY</button>
-  <% end %>
+  <%= link_to "NEW KITTY", new_kitty_path, :class=>"btn btn-danger btn-gradient button-landing sticky-bottom"%>
 <% end %>
 
-<%= link_to root_path do %>
-  <button type="button" class="btn btn-danger btn-gradient button-landing sticky-bottom">Home page</button>
-<% end %>
-
+<%= link_to "Home page", root_path, :class=>"btn btn-danger btn-gradient button-landing sticky-bottom" %>
 
 
 
