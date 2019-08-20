@@ -25,6 +25,7 @@ require 'faker'
   user.email = "#{user.first_name}#{user.last_name}@#{domain.sample}#{domain_suffix.sample}"
   user.nickname = "#{user.first_name}#{user.last_name}"
   user.password = 123456
+  user.admin = false
   user.save
   kitty = Kitty.new(
     first_name: Faker::Creature::Cat.name,
@@ -36,6 +37,8 @@ require 'faker'
   kitty.owner = user
   kitty.save
 end
+
+
 
 puts 'Seed done for kitty, user and booking'
 puts 'Every thing is okay'
