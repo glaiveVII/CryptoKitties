@@ -24,7 +24,7 @@ require 'faker'
   domain_suffix = [".com", ".co.uk", ".org"]
   user.email = "#{user.first_name}#{user.last_name}@#{domain.sample}#{domain_suffix.sample}"
   user.nickname = "#{user.first_name}#{user.last_name}"
-  user.password = 123456
+  user.password = 123456789
   user.admin = false
   user.save
   kitty = Kitty.new(
