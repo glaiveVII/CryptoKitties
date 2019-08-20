@@ -1,5 +1,6 @@
 class Kitty < ApplicationRecord
   belongs_to :owner, class_name: "User"
+  has_many :bookings, dependent: :destroy
 
   validates_uniqueness_of :first_name, scope: [:last_name]
   validates :first_name, presence: true
