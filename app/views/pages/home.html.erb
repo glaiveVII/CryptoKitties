@@ -3,11 +3,54 @@
   <div class="kitties-image-container">
     <div class="main-title">
       <h1>CryptoKitties</h1>
+      <div class="secondary-title">
       <p>Collect and breed furrever friends!</p>
+      </div>
+
       <div class="rectangle-info">
-        <h2> </h2>
+        <div class="index-egg-image">
+          <img id="blue-egg" src="https://miro.medium.com/max/528/1*8FhC-Uxp7F-7iKJkp7N2aQ.gif" alt="https://miro.medium.com/max/528/1*8FhC-Uxp7F-7iKJkp7N2aQ.gif" class="transparent">
+        </div>
+        <div class="wrapped-proposition">
+        <ul class="value-proposition">
+          <li class="ValueProposition-item-1">
+            <!-- <img class="ValueProposition-icon" src="./images/coins.svg"> -->
+             <%= image_tag("coins.svg", {:style => "width:50px;"}) %>
+            <span class="ValueProposition-text">Buy & sell cats with our community</span>
+          </li>
+          <li class="ValueProposition-item-1">
+            <!-- <img class="ValueProposition-icon" src="./images/giftbox.svg"> -->
+            <%= image_tag("giftbox.svg", {:style => "width:50px;"}) %>
+            <span class="ValueProposition-text">Create collections & earn rewards</span>
+          </li>
+          <li class="ValueProposition-item-1">
+            <!-- <img class="ValueProposition-icon" src="./images/game-console.svg"> -->
+            <%= image_tag("game-console.svg", {:style => "width:50px;"}) %>
+            <span class="ValueProposition-text">Play games in the KittyVerse</span>
+          </li>
+          <li class="ValueProposition-item-2">
+            <!-- <img class="ValueProposition-icon" src="./images/eggplant.svg"> -->
+            <%= image_tag("eggplant.svg", {:style => "width:50px;"}) %>
+            <span class="ValueProposition-text">Breed adorable cats & unlock rare traits</span>
+          </li>
+          <li class="ValueProposition-item-2">
+            <!-- <img class="ValueProposition-icon" src="./images/easter-egg.svg"> -->
+            <%= image_tag("easter-egg.svg", {:style => "width:50px;"}) %>
+            <span class="ValueProposition-text">Chase limited edition Fancy cats</span>
+          </li>
+          <li class="ValueProposition-item-2">
+            <!-- <img class="ValueProposition-icon" src="./images/rubiks.svg"> -->
+            <%= image_tag("rubik.svg", {:style => "width:50px;"}) %>
+            <span class="ValueProposition-text">Crack puzzles alongside other players</span>
+          </li>
+        </ul>
+      </div>
       </div>
     </div>
+  </div>
+
+  <div class="grey-strip">
+    <%= image_tag("index-grey-strip.png", {:style => "width:100%;"}) %>
   </div>
 
 </main>
@@ -16,9 +59,3 @@
 <!-- <%= link_to "Browse Kitties", kitties_path %>-->
 
 
-<h1>hello world</h1>
-<h2>this is a subtitle to test</h2>
-
-
-<%= link_to 'Browse Kitties', kitties_path %>
-<%= link_to 'Add a new Kitty', new_kitty_path %>
