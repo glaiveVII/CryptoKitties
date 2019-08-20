@@ -39,6 +39,5 @@ require 'faker'
 end
 
 
-
-puts 'Seed done for kitty, user and booking'
+puts 'Seed done for KIITY AND USER'
 puts 'Every thing is okay'
