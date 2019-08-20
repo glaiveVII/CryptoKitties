@@ -1,5 +1,5 @@
 
-<%= simple_form_for(@kitty) do |f| %>
+<%= simple_form_for(kitty) do |f| %>
   <%= f.error_notification %>
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
@@ -7,6 +7,7 @@
     <%= f.input :first_name %>
     <%= f.input :last_name %>
     <%= f.input :public_key %>
+    <%= f.input :price, input_html: { value: kitty.price }%>
   </div>
 
   <div class="form-actions">
