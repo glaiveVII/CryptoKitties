@@ -26,7 +26,6 @@ require 'faker'
   user.nickname = "#{user.first_name}#{user.last_name}"
   user.password = 123456
   user.admin = false
-  user.password = 123456789
   user.save
   kitty = Kitty.new(
     first_name: Faker::Creature::Cat.name,
