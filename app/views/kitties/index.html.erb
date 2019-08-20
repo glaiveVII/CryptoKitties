@@ -4,27 +4,27 @@
 
 
 
-<tbody>
+<div class="button-index">
   <% @kitties.each do |kitty| %>
-    <tr>
-      <td><%= kitty.first_name %></td>
-      <td><%= link_to 'Show', kitty %></td>
-    </tr>
-    <br>
-    <br>
+    <%= kitty.first_name %>
+    <%= link_to "SHOW", kitty, :class=>"btn btn-danger btn-gradient button-landing sticky-bottom"%>
   <% end %>
-</tbody>
+</div>
 
 
+
 <br>
 <br>
 <br>
 <br>
+
 
 <% if policy(Kitty).create? %>
-  <%= link_to 'New KITTY', new_kitty_path %>
+  <%= link_to "NEW KITTY", new_kitty_path, :class=>"btn btn-danger btn-gradient button-landing sticky-bottom"%>
 <% end %>
-<%= link_to 'Home page', root_path %>
+
+<%= link_to "Home page", root_path, :class=>"btn btn-danger btn-gradient button-landing sticky-bottom" %>
+
 
 
 
