@@ -20,6 +20,7 @@ class KittiesController < ApplicationController
   def create
     @kitty = Kitty.new(kitty_params)
     @kitty.owner = current_user
+    # raise
     if @kitty.save
       redirect_to root_path
     else
@@ -48,6 +49,6 @@ class KittiesController < ApplicationController
   end
 
   def kitty_params
-    params.require(:kitty).permit(:first_name, :last_name, :public_key)
+    params.require(:kitty).permit(:first_name, :last_name, :public_key, :price)
   end
 end
