@@ -2,7 +2,6 @@ class KittiesController < ApplicationController
   before_action :set_kitty, only: [:show, :edit, :update, :destroy]
 
   def index
-    # @kitty = Kitty.all
     @kitty = policy_scope(Kitty)
     # plus convention probleme : small recap ?
     # @kitties = Kitty.all
