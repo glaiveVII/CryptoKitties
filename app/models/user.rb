@@ -9,7 +9,7 @@ class User < ApplicationRecord
   validates :email, presence: true
   # no need of these validation otherwise you need
   # to change in view/device/registrations/new
-  # validates :first_name, presence: true
-  # validates :last_name, presence: true
+  validates :first_name, presence: true
+  validates :last_name, presence: true
   validates :nickname, presence: true, uniqueness: true
 end

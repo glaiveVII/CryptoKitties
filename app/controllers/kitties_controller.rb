@@ -6,7 +6,7 @@ class KittiesController < ApplicationController
   end
 
   def index
-    @kitty = Kitty.all
+    @kitty = policy_scope(Kitty)
     # plus convention probleme : small recap ?
     # @kitties = Kitty.all
   end
