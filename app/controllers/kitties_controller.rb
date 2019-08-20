@@ -2,11 +2,13 @@ class KittiesController < ApplicationController
   before_action :set_kitty, only: [:show, :edit, :update, :destroy]
 
   def new
-    @kitty = Kitty.new
+    @kitties = Kitty.new
   end
 
   def index
-    @kitties = Kitty.all
+    @kitty = Kitty.all
+    # plus convention probleme : small recap ?
+    # @kitties = Kitty.all
   end
 
   def show
