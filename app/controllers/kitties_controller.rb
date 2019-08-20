@@ -2,7 +2,7 @@ class KittiesController < ApplicationController
   before_action :set_kitty, only: [:show, :edit, :update, :destroy]
 
   def index
-    @kitty = policy_scope(Kitty)
+    @kitties = policy_scope(Kitty)
     # plus convention probleme : small recap ?
     # @kitties = Kitty.all
     # attention julien convention de nommage ici
