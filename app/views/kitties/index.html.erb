@@ -15,14 +15,29 @@
       <tr>
         <td><%= kitty.first_name %></td>
         <td><%= link_to 'Show', kitty %></td>
-        <td><%= link_to 'Edit', edit_kitty_path(kitty) %></td>
-        <td><%= link_to 'Destroy', kitty, method: :delete, data: { confirm: 'Are you sure you want to delete this lovely kitty ???' } %></td>
+        <% if policy(kitty).edit? %>
+          <td><%= link_to 'Edit', edit_kitty_path(kitty) %></td>
+        <% end %>
+
+        <% if policy(kitty).destroy? %>
+          <td><%= link_to 'Destroy', kitty, method: :delete, data: { confirm: 'Are you sure you want to delete this lovely kitty ???' } %></td>
+        <% end %>
+
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
+<br>
+<br>
+<br>
 
-<%= link_to 'New Kitty', new_kitty_path %>
+<% if policy(Kitty).create? %>
+  <%= link_to 'New KITTY', new_kitty_path %>
+<% end %>
 <%= link_to 'Home page', root_path %>
+
+
+
+

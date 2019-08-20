@@ -17,6 +17,9 @@
         <li class="nav-item">
           <%= link_to "Kitties", kitties_path, class: "nav-link" %>
         </li>
+        <li class="nav-item">
+          <%= current_user.nickname %>
+        </li>
         <li class="nav-item dropdown">
           <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <%= image_tag "https://i.redd.it/nbl26wzzp5201.gif", style: 'height:90% ;width:20%;' %>

@@ -1,29 +1,36 @@
 class KittyPolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
-      scope.all
+      if user.admin
+        scope.all
+      else
+        scope.where(user: user)
+      end
     end
+  end
+
+  def update? # both edit and update
+    # here is it user or owner???????????
+    user.admin || kitty_owner?
+    # record: instance given as argument to the method authorize
+    # user: current_user
   end
 
   def show?
     true
   end
 
-  def index?
+  def create?
     true
   end
 
-  def create?
-    # user.is_partner if user
-  end
-
-  def update?
-    # record_owner?
+  def destroy?
+    user.admin || kitty_owner?
   end
 
   private
 
-  def record_owner?
+  def kitty_owner?
     record.user == user
   end
 end
