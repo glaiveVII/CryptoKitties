@@ -37,17 +37,5 @@ require 'faker'
   kitty.save
 end
 
-
-
-
-
-
-
-
-
-# puts 'Creating users...'
-# User.create!(name: 'Gaby Martinez', email: 'gaby@gmail.com', password: '123456')
-# User.create!(name: 'Izzy Brown', email: 'izzy@gmail.com', password: '123456')
-# User.create!(name: 'Lucien George', email: 'lucien@gmail.com', password: '123456')
-# User.create!(name: 'Ife Odugbesan', email: 'ife@gmail.com', password: '123456')
-# puts 'Users created!'
+puts 'Seed done for kitty, user and booking'
+puts 'Every thing is okay'
