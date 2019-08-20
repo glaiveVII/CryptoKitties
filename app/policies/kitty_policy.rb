@@ -4,14 +4,14 @@ class KittyPolicy < ApplicationPolicy
       if user.admin
         scope.all
       else
-        scope.where(user: user)
+        scope.where(owner: user)
       end
     end
   end
 
   def update? # both edit and update
     # here is it user or owner???????????
-    user.admin || kitty_owner?
+    user.admin || record.owner == user
     # record: instance given as argument to the method authorize
     # user: current_user
   end
@@ -25,12 +25,7 @@ class KittyPolicy < ApplicationPolicy
   end
 
   def destroy?
-    user.admin || kitty_owner?
+    user.admin || record.owner == user
   end
 
-  private
-
-  def kitty_owner?
-    record.user == user
-  end
 end
