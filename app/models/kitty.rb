@@ -1,11 +1,11 @@
 class Kitty < ApplicationRecord
-  belongs_to :user
+  belongs_to :owner, class_name: "User"
 
-  validates_uniqueness_of :first_name, scope: [:last_name]
-  validates :first_name, presence: true
-  validates :last_name, presence: true
-  validates :user_owner_id, presence: true
-  validates :price, presence: true
+  # validates_uniqueness_of :first_name, scope: [:last_name]
+  # validates :first_name, presence: true
+  # validates :last_name, presence: true
+  # validates :user_owner_id, presence: true
+  # validates :price, presence: true
   # to simplify db i don't put this two mandatory
   # validates :public_key, presence: true
   # validates :available, presence: true

@@ -2,7 +2,7 @@ class KittiesController < ApplicationController
   before_action :set_kitty, only: [:show, :edit, :update, :destroy]
 
   def new
-    @kitties = Kitty.new
+    @kitty = Kitty.new
   end
 
   def index
@@ -19,6 +19,7 @@ class KittiesController < ApplicationController
 
   def create
     @kitty = Kitty.new(kitty_params)
+    @kitty.owner = current_user
     if @kitty.save
       redirect_to root_path
     else
@@ -47,6 +48,6 @@ class KittiesController < ApplicationController
   end
 
   def kitty_params
-    params.require(:kitty).permit(:first_name, :last_name)
+    params.require(:kitty).permit(:first_name, :last_name, :public_key)
   end
 end
