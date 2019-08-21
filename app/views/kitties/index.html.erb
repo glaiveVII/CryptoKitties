@@ -53,6 +53,19 @@
 <br>
 <br>
 
+<% if policy(Kitty).create? %>
+  <%= link_to 'New KITTY', new_kitty_path, :class=>"btn btn-primary btn-gradient button-landing sticky-bottom" %>
+
+<% end %>
+
+
+<%= link_to 'Home page', root_path, :class=>"btn btn-primary btn-gradient button-landing sticky-bottom" %>
+
+<br>
+<br>
+<br>
+<br>
+
 <div
   id="map"
   style="width: 100%;
@@ -61,19 +74,9 @@
   data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
 ></div>
 
-<br>
-<br>
-<br>
-<br>
 
 
-<% if policy(Kitty).create? %>
-  <%= link_to 'New KITTY', new_kitty_path, :class=>"btn btn-primary btn-gradient button-landing sticky-bottom" %>
 
-<% end %>
-
-
-<%= link_to 'Home page', root_path, :class=>"btn btn-primary btn-gradient button-landing sticky-bottom" %>
 
 
 
