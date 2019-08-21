@@ -8,16 +8,6 @@ class KittiesController < ApplicationController
     # @kitties = Kitty.all
     # attention julien convention de nommage ici
     # singulier pour garder coherence avec dhh
-  end
-
-  def new
-    @kitty = Kitty.new
-    authorize @kitty
-  end
-
-  def show
-    authorize @kitty
-
     @kitty = Kitty.geocoded #returns flats with coordinates
 
     @markers = @kitty.map do |kitty|
@@ -26,6 +16,24 @@ class KittiesController < ApplicationController
         lng: kitty.longitude
       }
     end
+  end
+
+  def new
+    @kitty = Kitty.new
+    authorize @kitty
+  end
+
+  def show
+    # here need to add the booking stuff
+    # it will be on the show page !!
+    # @booking = Booking.new
+    authorize @kitty
+    # raise
+    @markers =
+      [{
+        lat: @kitty.latitude,
+        lng: @kitty.longitude
+      }]
   end
 
   def edit
@@ -73,6 +81,6 @@ class KittiesController < ApplicationController
   end
 
   def kitty_params
-    params.require(:kitty).permit(:first_name, :last_name, :public_key, :price)
+    params.require(:kitty).permit(:first_name, :last_name, :public_key, :price, :address)
   end
 end
