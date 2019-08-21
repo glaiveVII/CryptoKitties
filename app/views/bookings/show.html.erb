@@ -1,9 +1,12 @@
-<h1> WHAZAAAAAAAAAAAAA </h1>
+<h2> WHAZAAAAAAAAAAAAA YOU BOOKED THIS KITTYYYYYY </h1>
 <ul>
-  <li><%= @booking.kitty.public_key %></li>
-  <li><%= @booking.user.email %></li>
-  <li><%= @booking.start_date %></li>
-  <li><%= @booking.end_date %></li>
+  <li>public key of your kitty : <%= @booking.kitty.public_key %></li>
+  <li>you email address :<%= @booking.user.email %></li>
+  <li>Start date reservation :<%= @booking.start_date %></li>
+  <li>End date reservation :<%= @booking.end_date %></li>
 </ul>
 
-<p><%= link_to "Back TO ALL KITTIES", kitties_path, :class=>"teach-btn btn button-landing sticky-bottom" %></p>
+<p><%= link_to "Back TO ALL KITTIES", kitties_path, :class=>"teach-btn btn button-landing sticky-bottom" %>
+  <%= link_to "SEE ALL KITTIES YOU BOOKED", kitty_bookings_path(@booking.kitty), :class=>"teach-btn btn button-landing sticky-bottom" %>
+  <%= link_to "BACK TO THE HOME PAGE", root_path, :class=>"teach-btn btn button-landing sticky-bottom" %>
+  </p>
