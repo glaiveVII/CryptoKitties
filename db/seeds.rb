@@ -36,6 +36,7 @@ require 'faker'
   kitty.price = prices.sample
   kitty.owner = user
   kitty.attributes = {}
+  kitty.address = '16 Villa Gaudelet, Paris'
   kitty.save
 end
 

@@ -3,6 +3,7 @@ class KittiesController < ApplicationController
 
   def index
     @kitties = policy_scope(Kitty)
+    # raise
     # plus convention probleme : small recap ?
     # @kitties = Kitty.all
     # attention julien convention de nommage ici
@@ -19,6 +20,15 @@ class KittiesController < ApplicationController
     # it will be on the show page !!
     # @booking = Booking.new
     authorize @kitty
+
+    @kitty = Kitty.geocoded #returns flats with coordinates
+
+    @markers = @kitty.map do |kitty|
+      {
+        lat: kitty.latitude,
+        lng: kitty.longitude
+      }
+    end
   end
 
   def edit

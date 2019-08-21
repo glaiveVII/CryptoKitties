@@ -10,4 +10,8 @@ class Kitty < ApplicationRecord
   validates :public_key, presence: true
   # to simplify db i don't put this two mandatory
   # validates :available, presence: true
+
+  #geocode gem
+  geocoded_by :address
+  after_validation :geocode, if: :will_save_change_to_address?
 end
