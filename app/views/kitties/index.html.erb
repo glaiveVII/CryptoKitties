@@ -1,6 +1,6 @@
 <!-- email: 'airtop@gmail.com', password: 'airtop'
  -->
-<p id="notice"><%= notice %></p>
+<!-- <p id="notice"><%= notice %></p>
 
 <h1>kitties</h1>
 
@@ -12,46 +12,37 @@
           <th>Name</th>
           <th colspan="3"></th>
         </tr>
-      </thead>
+      </thead> -->
 
+<!-- <div class="grey-strip" style="background-image: url('/assets/multi-icon-strip-a59adcfe7b76762eb378902d7dfd84916270fd67cb8e27ec36df5e3bb7ecb779.png')"> -->
 
-
-<div class="container">
-  <div class="row">
-    <% @kitties.each do |kitty| %>
-      <div class="col-12 col-sm-3">
-        <div class="card-trip">
-          <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
-          <div class="card-trip-infos">
-            <div>
-              <h2><%= link_to kitty.first_name, kitty %></h2>
-              <h3><%= link_to 'Show', kitty, :class=>"btn btn-primary btn-gradient button-landing sticky-bottom" %></h3>
-              <% if policy(kitty).edit? %>
-                <h3><%= link_to 'Edit', edit_kitty_path(kitty), :class=>"btn btn-primary btn-gradient button-landing sticky-bottom" %></h3>
-                <% end %>
-                <% if policy(kitty).destroy? %>
-                  <h3><%= link_to 'Destroy', kitty, method: :delete, data: { confirm: 'Are you sure you want to delete this lovely kitty ???' }, :class=>"btn btn-primary btn-gradient button-landing sticky-bottom" %></h3>>
-                <% end %>
-              <p><%= %></p>
-            </div>
-            <h2 class="card-trip-pricing">£99.99</h2>
-            <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+  <div class="container">
+    <div class="row">
+      <% @kitties.each do |kitty| %>
+        <div class="card" style="margin-bottom: 15px;">
+          <h3 class="title"><% kitty.first_name %><%= kitty.last_name %></h3>
+          <div class="bar">
+            <div class="emptybar"></div>
+            <div class="filledbar"></div>
+          </div>
+          <div class="circle">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+              <circle class="stroke" cx="60" cy="60" r="50"/>
+            </svg>
           </div>
         </div>
-      </div>
-    <% end %>
+      <% end %>
+    </div>
   </div>
-</div>
 
+  <h3><%= link_to 'Show', kitty, :class=>"btn btn-primary btn-gradient button-landing sticky-bottom" %></h3>
+  <% if policy(kitty).edit? %>
+    <h3><%= link_to 'Edit', edit_kitty_path(kitty), :class=>"btn btn-primary btn-gradient button-landing sticky-bottom" %></h3>
+    <% end %>
+    <% if policy(kitty).destroy? %>
+      <h3><%= link_to 'Destroy', kitty, method: :delete, data: { confirm: 'Are you sure you want to delete this lovely kitty ???' }, :class=>"btn btn-primary btn-gradient button-landing sticky-bottom" %></h3>>
+    <% end %>
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 
 <% if policy(Kitty).create? %>
   <%= link_to 'New KITTY', new_kitty_path, :class=>"btn btn-primary btn-gradient button-landing sticky-bottom" %>
@@ -61,10 +52,7 @@
 
 <%= link_to 'Home page', root_path, :class=>"btn btn-primary btn-gradient button-landing sticky-bottom" %>
 
-<br>
-<br>
-<br>
-<br>
+
 
 <div
   id="map"
