@@ -8,9 +8,8 @@ class KittiesController < ApplicationController
     # @kitties = Kitty.all
     # attention julien convention de nommage ici
     # singulier pour garder coherence avec dhh
-    @kitty = Kitty.geocoded #returns flats with coordinates
 
-    @markers = @kitty.map do |kitty|
+    @markers = @kitties.map do |kitty|
       {
         lat: kitty.latitude,
         lng: kitty.longitude

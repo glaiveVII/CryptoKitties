@@ -15,7 +15,7 @@ class KittyPolicy < ApplicationPolicy
       #   scope.where(owner: user)
       # end
 
-      scope.all
+      scope.geocoded
     end
   end
 
