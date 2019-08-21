@@ -1,5 +1,6 @@
 
-<div class="cat-card-container">
+<!-- <div class="cat-card-container">
+
   <div class="card">
     <h3 class="title">Mist</h3>
     <div class="bar">
@@ -11,8 +12,8 @@
       <circle class="stroke" cx="60" cy="60" r="50"/>
     </svg>
     </div>
-  </div>
-  <div class="card">
+  </div> -->
+ <!--  <div class="card">
     <h3 class="title">Puff</h3>
     <div class="bar">
       <div class="emptybar"></div>
@@ -23,9 +24,12 @@
       <circle class="stroke" cx="60" cy="60" r="50"/>
     </svg>
     </div>
-  </div>
+  </div> -->
+  <div class="grey-strip" style="background-image: url('/assets/multi-icon-strip-a59adcfe7b76762eb378902d7dfd84916270fd67cb8e27ec36df5e3bb7ecb779.png')">
+
+
   <div class="card">
-    <h3 class="title">Shadow</h3>
+    <h3 class="title"><%= @kitty.first_name %> <%= @kitty.last_name %></h3>
     <div class="bar">
       <div class="emptybar"></div>
       <div class="filledbar"></div>
@@ -37,7 +41,7 @@
     </svg>
     </div>
   </div>
-  <div class="card">
+  <!-- <div class="card">
     <h3 class="title">Pawl</h3>
     <div class="bar">
       <div class="emptybar"></div>
@@ -49,7 +53,7 @@
     </svg>
     </div>
   </div>
-</div>
+</div> -->
 
 <!-- <p id="notice"><%= notice %></p> -->
 
@@ -104,5 +108,7 @@
    <%= link_to "SEE ALL KITTIES YOU BOOKED", kitty_bookings_path(@kitty), :class=>"teach-btn btn button-landing sticky-bottom" %>
 
 </div>
+
+
 
 
