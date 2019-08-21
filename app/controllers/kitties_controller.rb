@@ -8,6 +8,14 @@ class KittiesController < ApplicationController
     # @kitties = Kitty.all
     # attention julien convention de nommage ici
     # singulier pour garder coherence avec dhh
+    @kitty = Kitty.geocoded #returns flats with coordinates
+
+    @markers = @kitty.map do |kitty|
+      {
+        lat: kitty.latitude,
+        lng: kitty.longitude
+      }
+    end
   end
 
   def new
@@ -17,15 +25,12 @@ class KittiesController < ApplicationController
 
   def show
     authorize @kitty
-
-    @kitty = Kitty.geocoded #returns flats with coordinates
-
-    @markers = @kitty.map do |kitty|
-      {
-        lat: kitty.latitude,
-        lng: kitty.longitude
-      }
-    end
+    # raise
+    @markers =
+      [{
+        lat: @kitty.latitude,
+        lng: @kitty.longitude
+      }]
   end
 
   def edit
@@ -73,6 +78,6 @@ class KittiesController < ApplicationController
   end
 
   def kitty_params
-    params.require(:kitty).permit(:first_name, :last_name, :public_key, :price)
+    params.require(:kitty).permit(:first_name, :last_name, :public_key, :price, :address)
   end
 end

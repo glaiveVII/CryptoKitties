@@ -27,12 +27,26 @@
   </div>
 </div>
 
+<br>
+<br>
+<br>
+<br>
 
+<div
+  id="map"
+  style="width: 40%;
+  height: 200px;"
+  data-markers="<%= @markers.to_json %>"
+  data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+></div>
+
+<br>
+<br>
 
 <% if policy(@kitty).edit? %>
-  <%= link_to 'Edit the KITTY', edit_kitty_path(@kitty) %> |
+  <%= link_to 'Edit the KITTY', edit_kitty_path(@kitty), :class=>"btn btn-primary btn-gradient button-landing sticky-bottom" %> |
 <% end %>
-<%= link_to 'Back to all KITTY page', kitties_path %>
+<%= link_to 'Back to all KITTY page', kitties_path, :class=>"btn btn-primary btn-gradient button-landing sticky-bottom" %>
 
 
 
