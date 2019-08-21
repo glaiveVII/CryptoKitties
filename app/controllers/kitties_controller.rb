@@ -3,6 +3,7 @@ class KittiesController < ApplicationController
 
   def index
     @kitties = policy_scope(Kitty)
+    raise
     # plus convention probleme : small recap ?
     # @kitties = Kitty.all
     # attention julien convention de nommage ici

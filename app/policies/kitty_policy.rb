@@ -1,11 +1,11 @@
 class KittyPolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
-      if user.admin
-        scope.all
-      else
-        scope.where(owner: user)
-      end
+      # if user.admin
+      #   scope.all
+      # else
+      #   scope.where(owner: user)
+      # end
     end
   end
 
