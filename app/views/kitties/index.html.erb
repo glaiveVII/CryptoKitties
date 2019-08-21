@@ -36,9 +36,10 @@
 <br>
 
 <% if policy(Kitty).create? %>
-  <%= link_to 'New KITTY', new_kitty_path %>
+  <%= link_to 'New KITTY', new_kitty_path, :class=>"btn btn-danger btn-gradient button-landing sticky-bottom" %>
 <% end %>
-<%= link_to 'Home page', root_path %>
+
+<%= link_to 'Home page', root_path, :class=>"btn btn-danger btn-gradient button-landing sticky-bottom" %>
 
 
 
