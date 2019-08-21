@@ -43,10 +43,10 @@ require 'faker'
   kitty.save
 end
 
+puts 'Seed done for kitty, user and booking'
 User.create(email: 'airtop@gmail.com', password: 'airtop',
     first_name: Faker::Name.first_name,
     last_name: Faker::Name.last_name, nickname: "Paul")
+puts "Added the Airtop user to make thing easier"
 
-
-puts 'Seed done for kitty, user and booking'
 puts 'Every thing is very okay'
