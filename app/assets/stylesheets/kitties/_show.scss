@@ -38,7 +38,9 @@ body {
 /*   margin-left: -50px; */
   transition: 0.4s ease-out;
   position: relative;
-  left: 0px;
+  position: relative;
+  top: -300px;
+  left: 176px;
 }
 
 .card:not(:first-child) {
@@ -123,5 +125,9 @@ svg {
   position: absolute;
   bottom: 27px;
   left: -22px;
+
+}
+
+.container {
 
 }
