@@ -34,10 +34,6 @@ class KittiesController < ApplicationController
         lat: @kitty.latitude,
         lng: @kitty.longitude
       }]
-
-      # temp
-      @kitties = policy_scope(Kitty)
-      authorize @kitties
   end
 
   def edit
