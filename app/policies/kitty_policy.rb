@@ -6,6 +6,7 @@ class KittyPolicy < ApplicationPolicy
       # else
       #   scope.where(owner: user)
       # end
+      scope.all
     end
   end
 
