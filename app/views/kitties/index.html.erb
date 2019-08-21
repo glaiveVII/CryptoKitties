@@ -8,13 +8,13 @@
   <% @kitties.each do |kitty| %>
     <tr>
       <td><%= kitty.first_name %></td>
-      <td><%= link_to 'Show', kitty %></td>
+      <td><%= link_to 'Show', kitty, :class=>"btn btn-danger btn-gradient button-landing sticky-bottom" %></td>
       <% if policy(kitty).edit? %>
-        <td><%= link_to 'Edit', edit_kitty_path(kitty) %></td>
+        <td><%= link_to 'Edit', edit_kitty_path(kitty), :class=>"btn btn-danger btn-gradient button-landing sticky-bottom" %></td>
       <% end %>
 
       <% if policy(kitty).destroy? %>
-        <td><%= link_to 'Destroy', kitty, method: :delete, data: { confirm: 'Are you sure you want to delete this lovely kitty ???' } %></td>
+        <td><%= link_to 'Destroy', kitty, method: :delete, data: { confirm: 'Are you sure you want to delete this lovely kitty ???' }, :class=>"btn btn-danger btn-gradient button-landing sticky-bottom" %></td>
       <% end %>
 
     </tr>
