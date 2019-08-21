@@ -18,7 +18,6 @@ ActiveRecord::Schema.define(version: 2019_08_20_134812) do
   create_table "bookings", force: :cascade do |t|
     t.bigint "user_id"
     t.bigint "kitty_id"
-    # price keep an int and think in cents
     t.float "price"
     t.datetime "start_date"
     t.datetime "end_date"
