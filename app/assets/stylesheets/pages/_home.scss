@@ -84,7 +84,7 @@ border: 1px solid #C4C4C4;
 box-sizing: border-box;
 border-radius: 30px;
 position: relative;
-top: 225px;
+top: 175px;
 left: auto;
 }
 
@@ -125,6 +125,7 @@ display: block;
 }
 
 .what-is-box {
+margin-top: 184px;
 width: 1072px;
 height: 400px;
 box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.25);
@@ -147,9 +148,9 @@ img {
 }
 
 .explainer-headline {
-  font-size: 50px;
 font-family: 'Roboto Condensed', sans-serif;
-font-weight: strong;
+ font-weight: bolder;
+  font-size: 65px;
 
 }
 
@@ -165,7 +166,8 @@ font-size: 25px;
 
 
 .invisible-box {
-width: 100%;
+margin: auto;
+width: 1072px;
 height: 400px;
 background: #FFFFFF;
 padding: 35px;
@@ -181,8 +183,30 @@ img {
 }
 }
 
+.teach-btn {
+  box-shadow: 0rem 0 0.5rem #c23da8;
+  margin-top: 20px;
+ background-color: #EF52D1;
+ color: white;
+ border: 2px;
+ border-color: #c23da8;
+ &:hover {
+  background-color: #c23da8;
+  color: white;
+ }
+}
+
 .text-how-to {
-  font-weight: strong;
+  font-weight: bolder;
+  font-size: 65px;
   font-family: 'Roboto Condensed', sans-serif;
   margin-top: 2%;
+}
+
+.pink-banner {
+  text-align: center;
+  margin: 50px;
+  width: 800px;
+
+
 }
