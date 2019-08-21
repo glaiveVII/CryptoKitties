@@ -43,6 +43,9 @@ require 'faker'
   kitty.save
 end
 
+User.create(email: 'airtop@gmail.com', password: 'airtop',
+    first_name: Faker::Name.first_name,
+    last_name: Faker::Name.last_name, nickname: "Paul")
 
 
 puts 'Seed done for kitty, user and booking'
