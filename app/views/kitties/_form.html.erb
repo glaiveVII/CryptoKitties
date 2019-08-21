@@ -8,10 +8,10 @@
     <%= f.input :last_name %>
     <%= f.input :public_key %>
     <%= f.input :address %>
-    <%= f.input :price, input_html: { value: kitty.price }%>
+    <%= f.input :price, input_html: { value: kitty.price } %>
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit %>
+    <%= f.button :submit, :class=>"teach-btn btn button-landing sticky-bottom" %>
   </div>
 <% end %>

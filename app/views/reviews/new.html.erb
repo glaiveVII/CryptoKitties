@@ -10,7 +10,7 @@
         <%= f.submit "Add a review :)" %>
       <% end %>
 
-      <p><%= link_to @kitty.title, kitty_path(@kitty) %></p>
+      <p><%= link_to [@kitty.last_name,@kitty.first_name], kitty_path(@kitty), :class=>"teach-btn btn button-landing sticky-bottom"  %></p>
     </div>
   </div>
 </div>
