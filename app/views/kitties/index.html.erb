@@ -27,47 +27,38 @@
 
 
 
-
+<div style="background-image: url('/assets/multi-icon-strip-a59adcfe7b76762eb378902d7dfd84916270fd67cb8e27ec36df5e3bb7ecb779.png')">
   <div class="container">
     <div class="row">
       <% @kitties.each do |kitty| %>
-        <div class="card" style="margin-bottom: 15px;">
-          <h3 class="title"><% kitty.first_name %><%= kitty.last_name %></h3>
-          <div class="bar">
-            <div class="emptybar"></div>
-            <div class="filledbar"></div>
-          </div>
-          <div class="circle">
-            <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
-              <circle class="stroke" cx="60" cy="60" r="50"/>
-            </svg>
-          </div>
-            <h3><%= link_to 'Show', kitty, :class=>"btn btn-primary btn-gradient button-landing sticky-bottom" %></h3>
-            <% if policy(kitty).edit? %>
-              <h3><%= link_to 'Edit', edit_kitty_path(kitty), :class=>"btn btn-primary btn-gradient button-landing sticky-bottom" %></h3>
+        <%= link_to kitty, class: 'card' do %>
+          <div>
+            <h3 class="title"><%= kitty.first_name %> <%= kitty.last_name %></h3>
+            <div class="bar">
+              <div class="emptybar"></div>
+              <div class="filledbar"></div>
+            </div>
+            <div class="circle">
+                  <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+                    <img class="golang" src="https://media1.giphy.com/media/WUVDEwPxTVJncK1tpL/giphy.gif?cid=790b76117465d7639b4910c58661247036622f77f289f466&amp;rid=giphy.gif">
+                  <!-- <circle class="stroke" cx="60" cy="60" r="50"/> -->
+                </svg>
+                </div>
+             <div class="card-button">
+              <% if policy(kitty).edit? %>
+                <%= link_to 'Edit', edit_kitty_path(kitty), :class=>"btn btn-primary btn-gradient button-landing sticky-bottom" %>
               <% end %>
               <% if policy(kitty).destroy? %>
-                <h3><%= link_to 'Destroy', kitty, method: :delete, data: { confirm: 'Are you sure you want to delete this lovely kitty ???' }, :class=>"btn btn-primary btn-gradient button-landing sticky-bottom" %></h3>>
+                <%= link_to 'Destroy', kitty, method: :delete, data: { confirm: 'Are you sure you want to delete this lovely kitty ???' }, :class=>"btn btn-primary btn-gradient button-landing sticky-bottom" %>
               <% end %>
-        </div>
-
-
+            </div>
+          </div>
+        <% end %>
       <% end %>
     </div>
   </div>
-
 </div>
 
-<div
-  id="map"
-  style="width: 40%;
-  height: 200px;"
-  data-markers="<%= @markers.to_json %>"
-  data-mapbox-api-key="<%#= ENV['MAPBOX_API_KEY'] %>"
-></div>
-
-<br>
-<br>
 
 
 <div
@@ -77,6 +68,10 @@
   data-markers="<%= @markers.to_json %>"
   data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
 ></div>
+
+
+
+
 
 
 
