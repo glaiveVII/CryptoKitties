@@ -5,6 +5,7 @@ class Kitty < ApplicationRecord
   validates_uniqueness_of :first_name, scope: [:last_name]
   validates :first_name, presence: true
   validates :last_name, presence: true
+  validates :address, presence: true
 
   validates :price, presence: true
   validates :public_key, presence: true
