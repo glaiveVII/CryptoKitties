@@ -43,4 +43,4 @@ end
 
 
 puts 'Seed done for kitty, user and booking'
-puts 'Every thing is okay'
+puts 'Every thing is very okay'
