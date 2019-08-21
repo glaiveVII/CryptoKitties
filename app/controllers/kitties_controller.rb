@@ -24,6 +24,9 @@ class KittiesController < ApplicationController
   end
 
   def show
+    # here need to add the booking stuff
+    # it will be on the show page !!
+    # @booking = Booking.new
     authorize @kitty
     # raise
     @markers =

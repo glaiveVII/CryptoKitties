@@ -35,10 +35,12 @@ require 'faker'
   kitty.public_key = "sadlfgjd;fzgadjgjkls;fgjk"
   kitty.price = prices.sample
   kitty.owner = user
+  kitty.attributes = {}
   kitty.address = '16 Villa Gaudelet, Paris'
   kitty.save
 end
 
 
-puts 'Seed done for KIITY AND USER'
+
+puts 'Seed done for kitty, user and booking'
 puts 'Every thing is okay'
