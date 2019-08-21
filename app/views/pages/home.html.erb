@@ -1,13 +1,20 @@
 <main class="main-container">
-
+<div class="main-wraper">
   <div class="kitties-image-container">
     <div class="main-title">
       <h1>CryptoKitties</h1>
       <div class="secondary-title">
       <p>Collect and breed furrever friends!</p>
       </div>
+
       <div class="browse-all">
+
+      <%= link_to kitties_path do %>
+        <button type="button" class="btn btn-danger btn-gradient button-landing sticky-bottom">BROWSE ALL KITTIES</button>
+      <% end %>
+
         <%= link_to 'BROWSE ALL KITTIES', kitties_path, :class=>"btn btn-danger btn-gradient button-landing sticky-bottom"%>
+
       </div>
 
       <div class="rectangle-info">
@@ -61,8 +68,19 @@
       </div>
     </div>
   </div>
-
-
+</div>
+    <div class="invisible-box">
+      <div class="learn-how">
+    <h2 class="text-how-to">Learn how to play CryptoKitties!</h2>
+    <p class="explainer-description">Join our Kitten Class and learn how to get started with breeding CryptoKitties — completely free! These two Kitty cuties will join you for class, and leave when the final bell rings.</p>
+          <div class="Teach-me">
+      <%= link_to kitties_path do %>
+        <button type="button" class="btn btn-danger btn-gradient button-landing sticky-bottom">Teach me how to breed</button>
+      <% end %>
+      </div>
+    <%= image_tag "https://i.giphy.com/media/443fUnKjNcdNmlLai6/giphy.webp" %>
+    </div>
+  </div>
 </main>
 
 

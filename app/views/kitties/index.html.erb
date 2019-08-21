@@ -2,6 +2,73 @@
 
 <h1>kitties</h1>
 
+<div>
+  <div class="container">
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
+
+      <div>
+        <tbody>
+          <% @kitties.each do |kitty| %>
+            <tr>
+              <div>
+                <td><%= kitty.first_name %></td>
+              </div>
+              <div>
+                <!-- Image here -->
+              </div>
+              <div>
+                <td><%= link_to 'Show', kitty %></td>
+                <% if policy(kitty).edit? %>
+                  <td><%= link_to 'Edit', edit_kitty_path(kitty) %></td>
+                <% end %>
+
+
+
+                <% if policy(kitty).destroy? %>
+                  <td><%= link_to 'Destroy', kitty, method: :delete, data: { confirm: 'Are you sure you want to delete this lovely kitty ???' } %></td>
+                <% end %>
+              </div>
+
+            </tr>
+          <% end %>
+        </tbody>
+      </div>
+    </table>
+    </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <% @kitties.each do |kitty| %>
+      <div class="col-12 col-sm-3">
+        <div class="card-trip">
+          <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+          <div class="card-trip-infos">
+            <div>
+              <h2><%= kitty.first_name %></h2>
+              <p><%= %></p>
+            </div>
+            <h2 class="card-trip-pricing">£99.99</h2>
+            <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<div class="button-index">
+  <% @kitties.each do |kitty| %>
+    <%= kitty.first_name %>
+    <%= link_to "SHOW", kitty, :class=>"btn btn-danger btn-gradient button-landing sticky-bottom"%>
+  <% end %>
+</div>
 
 
 <tbody>
@@ -43,7 +110,15 @@
 <br>
 <br>
 
+
 <% if policy(Kitty).create? %>
+
+  <%= link_to "NEW KITTY", new_kitty_path, :class=>"btn btn-danger btn-gradient button-landing sticky-bottom"%>
+<% end %>
+
+<%= link_to "Home page", root_path, :class=>"btn btn-danger btn-gradient button-landing sticky-bottom" %>
+
+
   <%= link_to 'New KITTY', new_kitty_path, :class=>"btn btn-danger btn-gradient button-landing sticky-bottom" %>
 <% end %>
 
