@@ -1,57 +1,25 @@
-<div class="cat-card-container">
-  <div class="card">
-    <h3 class="title">Mist</h3>
-    <div class="bar">
-      <div class="emptybar"></div>
-      <div class="filledbar"></div>
-    </div>
-    <div class="circle">
-      <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
-      <circle class="stroke" cx="60" cy="60" r="50"/>
-    </svg>
-    </div>
-  </div>
-  <div class="card">
-    <h3 class="title">Puff</h3>
-    <div class="bar">
-      <div class="emptybar"></div>
-      <div class="filledbar"></div>
-    </div>
-    <div class="circle">
-      <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
-      <circle class="stroke" cx="60" cy="60" r="50"/>
-    </svg>
-    </div>
-  </div>
-  <div class="card">
-    <h3 class="title">Shadow</h3>
-    <div class="bar">
-      <div class="emptybar"></div>
-      <div class="filledbar"></div>
-    </div>
-    <div class="circle">
-      <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
-        <img class="golang" src="https://media1.giphy.com/media/WUVDEwPxTVJncK1tpL/giphy.gif?cid=790b76117465d7639b4910c58661247036622f77f289f466&amp;rid=giphy.gif">
-      <!-- <circle class="stroke" cx="60" cy="60" r="50"/> -->
-    </svg>
-    </div>
-  </div>
-  <div class="card">
-    <h3 class="title">Pawl</h3>
-    <div class="bar">
-      <div class="emptybar"></div>
-      <div class="filledbar"></div>
-    </div>
-    <div class="circle">
-      <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
-      <circle class="stroke" cx="60" cy="60" r="50"/>
-    </svg>
-    </div>
+
+<!-- TRIAL -->
+<div class="container">
+  <div class="row">
+    <% @kitties.each do |kitty| %>
+      <div class="card" style="margin-bottom: 15px;">
+        <h3 class="title"><% kitty.first_name %><%= kitty.last_name %></h3>
+        <div class="bar">
+          <div class="emptybar"></div>
+          <div class="filledbar"></div>
+        </div>
+        <div class="circle">
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+            <circle class="stroke" cx="60" cy="60" r="50"/>
+          </svg>
+        </div>
+      </div>
+    <% end %>
   </div>
 </div>
-
 <!-- <p id="notice"><%= notice %></p> -->
-
+<!--
 <div class="kitty-profil-container">
     <div class="image-kitty">
       <img class="KittyBanner-image" src="https://img.cryptokitties.co/0x06012c8cf97bead5deae237070f9587f8e7a266d/1403605.svg" alt="Kitty #1403605 - 🧬 Gen 1 H1 Gene Swap" style="height: 200px; width: 200px;">
@@ -67,7 +35,6 @@
 </p>
   </div>
 
-
 <br>
 <br>
 <br>
@@ -78,22 +45,22 @@
   style="width: 40%;
   height: 200px;"
   data-markers="<%= @markers.to_json %>"
-  data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+  data-mapbox-api-key="<%#= ENV['MAPBOX_API_KEY'] %>"
 ></div>
 
 <br>
 <br>
 
-<% if policy(@kitty).edit? %>
-  <%= link_to 'Edit the KITTY', edit_kitty_path(@kitty), :class=>"btn btn-primary btn-gradient button-landing sticky-bottom" %> |
-<% end %>
-<%= link_to 'Back to all KITTY page', kitties_path, :class=>"btn btn-primary btn-gradient button-landing sticky-bottom" %>
+<%# if policy(@kitty).edit? %>
+  <%#= link_to 'Edit the KITTY', edit_kitty_path(@kitty), :class=>"btn btn-primary btn-gradient button-landing sticky-bottom" %> |
+<%# end %>
+<%#= link_to 'Back to all KITTY page', kitties_path, :class=>"btn btn-primary btn-gradient button-landing sticky-bottom" %>
 
 
-<%= link_to "Back to all KITTY page", kitties_path, :class=>"btn btn-danger btn-gradient button-landing sticky-bottom"  %>
+<%#= link_to "Back to all KITTY page", kitties_path, :class=>"btn btn-danger btn-gradient button-landing sticky-bottom"  %>
 
-<% if policy(@kitty).destroy? %>
-  <%= link_to 'Destroy', @kitty, method: :delete, class: "btn btn-danger btn-gradient button-landing sticky-bottom", data: { confirm: 'Are you sure you want to delete this lovely kitty ???' } %>
-<% end %>
-<%= link_to "RENT THE KITTY", root_path, :class=>"btn btn-danger btn-gradient button-landing sticky-bottom"  %>
-
+<%# if policy(@kitty).destroy? %>
+  <%#= link_to 'Destroy', @kitty, method: :delete, class: "btn btn-danger btn-gradient button-landing sticky-bottom", data: { confirm: 'Are you sure you want to delete this lovely kitty ???' } %>
+<%# end %>
+<%#= link_to "RENT THE KITTY", root_path, :class=>"btn btn-danger btn-gradient button-landing sticky-bottom"  %>
+ -->
