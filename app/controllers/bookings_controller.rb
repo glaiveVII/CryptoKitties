@@ -6,7 +6,7 @@ class BookingsController < ApplicationController
 
   def create
     @booking = Booking.new(booking_params)
-    @booking.boat = Kitty.find(params[:kitty_id])
+    @booking.kitty = Kitty.find(params[:kitty_id])
     @booking.user = current_user
     # raise
     if @kitty.save

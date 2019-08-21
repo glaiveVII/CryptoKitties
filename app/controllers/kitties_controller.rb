@@ -28,6 +28,8 @@ class KittiesController < ApplicationController
     # it will be on the show page !!
     # @booking = Booking.new
     authorize @kitty
+    @booking = Booking.new
+
     # raise
     @markers =
       [{
