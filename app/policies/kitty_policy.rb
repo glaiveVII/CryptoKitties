@@ -37,5 +37,4 @@ class KittyPolicy < ApplicationPolicy
   def destroy?
     user.admin || record.owner == user
   end
-
 end
