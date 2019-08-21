@@ -101,9 +101,5 @@
 
   <%= link_to "BOOK THE KITTY", new_kitty_booking_path(@kitty), :class=>"btn btn-danger btn-gradient button-landing sticky-bottom"  %>
 
-  <%= simple_form_for [@kitty, @booking] do |f| %>
-  <%= date_field_tag(:date, @date, options = {min: Date.today()}) %>
-  <%= submit_tag("BOOK THE KITTY NOW", :class=>"btn btn-danger btn-gradient button-landing sticky-bottom", id: "book-now" )%>
-  <% end %>
 </div>
 
