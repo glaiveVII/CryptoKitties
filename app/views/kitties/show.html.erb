@@ -46,7 +46,16 @@
     <div class="div edit-btn">
 
     </div>
+
     <div class="div booking">
+
+
+    <div class="circle">
+
+      <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <img class="golang" src="https://media1.giphy.com/media/WUVDEwPxTVJncK1tpL/giphy.gif?cid=790b76117465d7639b4910c58661247036622f77f289f466&amp;rid=giphy.gif">
+      <!-- <circle class="stroke" cx="60" cy="60" r="50"/> -->
+    </svg>
 
     </div>
   </div>
@@ -137,6 +146,21 @@ viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
 </div>
 <!--Header ends-->
 
+
 <!--Content starts-->
+
+  <h1>ALL REVIEWS FOR THIS KITTY </h1>
+  <ul>
+    <% @kitty.reviews.each do |review| %>
+
+      <li><h2><%= review.content %> Rating: <%= review.rating %></h2></li>
+
+    <% end %>
+  </ul>
+
+  <p><%= link_to "Add a review to this kitty", new_kitty_review_path(@kitty), :class=>"teach-btn btn button-landing sticky-bottom" %></p>
+</div>
+
+
 
 <!--Content ends-->

@@ -12,3 +12,9 @@
 @import "components/index";
 @import "pages/index";
 @import "kitties/index";
+
+
+#container-index {
+  display: flex;
+  flex-direction: column;
+}
