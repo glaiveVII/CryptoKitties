@@ -2,6 +2,10 @@
   justify-content: space-between;
   background: white;
   box-shadow: 0 2px 2px #9400FF;
+   a {
+    color: #c23da8;
+
+  }
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -12,3 +16,10 @@
   width: 40px;
 }
 
+#navbarSupportedContent {
+ a.nav-link {
+  color: #ef52d1;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: bolder;
+ }
+}
