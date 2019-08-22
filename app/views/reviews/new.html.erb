@@ -2,15 +2,15 @@
   <div class="row">
     <div class="col-sm-4 offset-sm-4">
 
-      <h1>ADD A REVIEW TO THIS LOVELY KITTY</h1>
+      <h2 style="margin: auto;">ADD A REVIEW TO THIS LOVELY KITTY</h2>
 
       <%= simple_form_for [@kitty, @review] do |f| %>
         <%= f.input :content %>
         <%= f.input :rating, as: :integer %>
-        <%= f.submit "Add a review :)" %>
+        <%= f.submit " Add a review ", :class=>"teach-btn btn button-landing sticky-bottom sweet-alert-demo"%>
       <% end %>
-
-      <p><%= link_to [@kitty.last_name,@kitty.first_name], kitty_path(@kitty), :class=>"teach-btn btn button-landing sticky-bottom"  %></p>
+<!--
+      <p><%= link_to [@kitty.last_name,@kitty.first_name], kitty_path(@kitty), :class=>"teach-btn btn button-landing sticky-bottom"  %></p> -->
     </div>
   </div>
 </div>

@@ -28,5 +28,8 @@ const initMapbox = () => {
   }
 };
 
+// sweet alert code
+
+
 
 export { initMapbox };

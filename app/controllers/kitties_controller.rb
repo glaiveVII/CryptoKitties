@@ -76,7 +76,6 @@ class KittiesController < ApplicationController
   end
 
   def donate
-
   end
 
   private
