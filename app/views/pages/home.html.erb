@@ -1,93 +1,93 @@
 
 
 <main class="main-container">
-<div class="main-wraper">
-  <div class="kitties-image-container">
-    <div class="main-title">
-      <h1>CryptoKitties</h1>
-      <div class="secondary-title">
-      <p>Collect and breed furrever friends!</p>
-      </div>
-
-      <p class="typed-text">
-        <span id="banner-typed-text" style="color: orange"></span>
-      </p>
-
-      <p>
-      <span id="banner-typed-text" style="color: black !important"></span>
-      </p>
-
-
-      <div class="browse-all">
-        <%= link_to 'BROWSE ALL KITTIES', kitties_path, :class=>"teach-btn btn button-landing sticky-bottom"%>
-      </div>
-
-      <div class="rectangle-info">
-        <div class="index-egg-image">
-          <img id="blue-egg" src="https://miro.medium.com/max/528/1*8FhC-Uxp7F-7iKJkp7N2aQ.gif" alt="https://miro.medium.com/max/528/1*8FhC-Uxp7F-7iKJkp7N2aQ.gif" class="transparent">
+  <div class="main-wraper">
+    <div class="kitties-image-container">
+      <div class="main-title">
+        <h1>CryptoKitties</h1>
+        <div class="secondary-title">
+        <p>Collect and breed furrever friends!</p>
         </div>
-        <div class="wrapped-proposition">
-        <ul class="value-proposition">
-            <li class="ValueProposition-item-1">
-              <!-- <img class="ValueProposition-icon" src="./images/coins.svg"> -->
-               <%= image_tag("coins.svg", {:style => "width:50px;"}) %>
-              <span class="ValueProposition-text">Buy & sell cats with our community</span>
-            </li>
-            <li class="ValueProposition-item-1">
-              <!-- <img class="ValueProposition-icon" src="./images/giftbox.svg"> -->
-              <%= image_tag("giftbox.svg", {:style => "width:50px;"}) %>
-              <span class="ValueProposition-text">Create collections & earn rewards</span>
-            </li>
-            <li class="ValueProposition-item-1">
-              <!-- <img class="ValueProposition-icon" src="./images/game-console.svg"> -->
-              <%= image_tag("game-console.svg", {:style => "width:50px;"}) %>
-              <span class="ValueProposition-text">Play games in the KittyVerse</span>
-            </li>
-            <li class="ValueProposition-item-2">
-              <!-- <img class="ValueProposition-icon" src="./images/eggplant.svg"> -->
-              <%= image_tag("eggplant.svg", {:style => "width:50px;"}) %>
-              <span class="ValueProposition-text">Breed adorable cats & unlock rare traits</span>
-            </li>
-            <li class="ValueProposition-item-2">
-              <!-- <img class="ValueProposition-icon" src="./images/easter-egg.svg"> -->
-              <%= image_tag("easter-egg.svg", {:style => "width:50px;"}) %>
-              <span class="ValueProposition-text">Chase limited edition Fancy cats</span>
-            </li>
-            <li class="ValueProposition-item-2">
-              <!-- <img class="ValueProposition-icon" src="./images/rubiks.svg"> -->
-              <%= image_tag("rubik.svg", {:style => "width:50px;"}) %>
-              <span class="ValueProposition-text">Crack puzzles alongside other players</span>
-            </li>
-          </ul>
+
+        <p class="typed-text">
+          <span id="banner-typed-text" style="color: #ef51d2; font-size: 30px;"></span>
+        </p>
+
+        <p>
+        <span id="banner-typed-text" style="color: black !important"></span>
+        </p>
+
+
+        <div class="browse-all">
+          <%= link_to 'BROWSE ALL KITTIES', kitties_path, :class=>"teach-btn btn button-landing sticky-bottom"%>
+        </div>
+
+        <div class="rectangle-info">
+          <div class="index-egg-image">
+            <img id="blue-egg" src="https://miro.medium.com/max/528/1*8FhC-Uxp7F-7iKJkp7N2aQ.gif" alt="https://miro.medium.com/max/528/1*8FhC-Uxp7F-7iKJkp7N2aQ.gif" class="transparent">
+          </div>
+          <div class="wrapped-proposition">
+          <ul class="value-proposition">
+              <li class="ValueProposition-item-1">
+                <!-- <img class="ValueProposition-icon" src="./images/coins.svg"> -->
+                 <%= image_tag("coins.svg", {:style => "width:50px;"}) %>
+                <span class="ValueProposition-text">Buy & sell cats with our community</span>
+              </li>
+              <li class="ValueProposition-item-1">
+                <!-- <img class="ValueProposition-icon" src="./images/giftbox.svg"> -->
+                <%= image_tag("giftbox.svg", {:style => "width:50px;"}) %>
+                <span class="ValueProposition-text">Create collections & earn rewards</span>
+              </li>
+              <li class="ValueProposition-item-1">
+                <!-- <img class="ValueProposition-icon" src="./images/game-console.svg"> -->
+                <%= image_tag("game-console.svg", {:style => "width:50px;"}) %>
+                <span class="ValueProposition-text">Play games in the KittyVerse</span>
+              </li>
+              <li class="ValueProposition-item-2">
+                <!-- <img class="ValueProposition-icon" src="./images/eggplant.svg"> -->
+                <%= image_tag("eggplant.svg", {:style => "width:50px;"}) %>
+                <span class="ValueProposition-text">Breed adorable cats & unlock rare traits</span>
+              </li>
+              <li class="ValueProposition-item-2">
+                <!-- <img class="ValueProposition-icon" src="./images/easter-egg.svg"> -->
+                <%= image_tag("easter-egg.svg", {:style => "width:50px;"}) %>
+                <span class="ValueProposition-text">Chase limited edition Fancy cats</span>
+              </li>
+              <li class="ValueProposition-item-2">
+                <!-- <img class="ValueProposition-icon" src="./images/rubiks.svg"> -->
+                <%= image_tag("rubik.svg", {:style => "width:50px;"}) %>
+                <span class="ValueProposition-text">Crack puzzles alongside other players</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grey-strip" style="background-image: url('<%=asset_path 'multi-icon-strip.png'%>')">
+      <div class="what-is-box">
+         <%= image_tag "https://media0.giphy.com/media/Jr3uf1HunOl0Two29g/giphy.gif?cid=790b7611393feb5aa1a2c90ef9f5e8c6cf98b03fb0316ce2&amp;rid=giphy.gif" %>
+         <div class="what-is-title">
+          <h2 class="explainer-headline">What is CryptoKitties?</h2>
+          <p class="explainer-description">CryptoKitties is a game centered around breedable, collectible, and oh-so-adorable creatures we call CryptoKitties! Each cat is one-of-a-kind and 100% owned by you; it cannot be replicated, taken away, or destroyed.</p>
         </div>
       </div>
     </div>
   </div>
-
-  <div class="grey-strip" style="background-image: url('<%=asset_path 'multi-icon-strip.png'%>')">
-    <div class="what-is-box">
-       <%= image_tag "https://media0.giphy.com/media/Jr3uf1HunOl0Two29g/giphy.gif?cid=790b7611393feb5aa1a2c90ef9f5e8c6cf98b03fb0316ce2&amp;rid=giphy.gif" %>
-       <div class="what-is-title">
-        <h2 class="explainer-headline">What is CryptoKitties?</h2>
-        <p class="explainer-description">CryptoKitties is a game centered around breedable, collectible, and oh-so-adorable creatures we call CryptoKitties! Each cat is one-of-a-kind and 100% owned by you; it cannot be replicated, taken away, or destroyed.</p>
+      <div class="invisible-box">
+        <div class="learn-how">
+      <h2 class="text-how-to">Learn how to play CryptoKitties!</h2>
+      <p class="explainer-description">Join our Kitten Class and learn how to get started with breeding CryptoKitties — completely free! These two Kitty cuties will join you for class, and leave when the final bell rings.</p>
+            <div class="Teach-me">
+        <%= link_to kitties_path do %>
+          <button type="button" class="teach-btn btn button-landing sticky-bottom">Teach me how to breed</button>
+        <% end %>
+        </div>
+        <div class="pink-banner">
+          <%= image_tag "https://i.giphy.com/media/443fUnKjNcdNmlLai6/giphy.webp" %>
+        </div>
       </div>
     </div>
-  </div>
-</div>
-    <div class="invisible-box">
-      <div class="learn-how">
-    <h2 class="text-how-to">Learn how to play CryptoKitties!</h2>
-    <p class="explainer-description">Join our Kitten Class and learn how to get started with breeding CryptoKitties — completely free! These two Kitty cuties will join you for class, and leave when the final bell rings.</p>
-          <div class="Teach-me">
-      <%= link_to kitties_path do %>
-        <button type="button" class="teach-btn btn button-landing sticky-bottom">Teach me how to breed</button>
-      <% end %>
-      </div>
-      <div class="pink-banner">
-        <%= image_tag "https://i.giphy.com/media/443fUnKjNcdNmlLai6/giphy.webp" %>
-      </div>
-    </div>
-  </div>
 </main>
 
 

@@ -1,14 +1,20 @@
+
+
 <div class="container">
   <div class="row">
     <div class="col-sm-4 offset-sm-4">
 
       <h2 style="margin: auto;">ADD A REVIEW TO THIS LOVELY KITTY</h2>
+      <div class="button-aaa" style="display: flex; justify-content: space-around;">
+        <%= simple_form_for [@kitty, @review] do |f| %>
+          <%= f.input :content %>
+          <%= f.input :rating, as: :integer %>
+          <%= f.submit " Add a review ", :class=>"teach-btn btn button-landing sticky-bottom sweet-alert-demo"%>
+        <% end %>
 
-      <%= simple_form_for [@kitty, @review] do |f| %>
-        <%= f.input :content %>
-        <%= f.input :rating, as: :integer %>
-        <%= f.submit " Add a review ", :class=>"teach-btn btn button-landing sticky-bottom sweet-alert-demo"%>
-      <% end %>
+        <%= link_to 'GO BACK', kitties_path, :class=>"teach-btn btn button-landing sticky-bottom"  %>
+
+      </div>
 <!--
       <p><%= link_to [@kitty.last_name,@kitty.first_name], kitty_path(@kitty), :class=>"teach-btn btn button-landing sticky-bottom"  %></p> -->
     </div>

@@ -11,7 +11,6 @@ class ReviewsController < ApplicationController
     @review.kitty = @kitty
     authorize @review
     if @review.save
-      redirect_to kitty_path(@kitty)
     else
       render :new
     end
