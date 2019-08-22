@@ -1,6 +1,6 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <%= link_to "https://www.cryptokitties.co", class: "navbar-brand" do %>
-    <%= image_tag "https://upload.wikimedia.org/wikipedia/commons/c/c5/Cryptokitty.gif" %>
+    <%= image_tag "https://upload.wikimedia.org/wikipedia/commons/c/c5/Cryptokitty.gif", style: 'height:70px ; width:70px; margin-left: 50px;' %>
     <% end %>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -23,7 +23,18 @@
         </li>
         <br>
         <li class="nav-item dropdown">
+
+          <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+
+          <!-- THIS IS THE DIAMOND GIF <%= image_tag "https://i.redd.it/nbl26wzzp5201.gif", style: 'height:90% ;width:20%;' %> -->
+          <!-- THIS IS A CONTAINER FOR THE DIAMOND GIF TO CENTER IT <div style="display: flex; justify-content: center;">
+            <img src="https://i.redd.it/nbl26wzzp5201.gifpng" style="width: 40px; height: 40px;" /> -->
+
+
+            </div>
+
           <%= image_tag "https://i.redd.it/nbl26wzzp5201.gif", style: 'height:38px; ;width:40px;' %>
+
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
             <%= link_to "Action", "#", class: "dropdown-item" %>
             <%= link_to "Another action", "#", class: "dropdown-item" %>
