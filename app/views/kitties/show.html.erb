@@ -96,13 +96,16 @@
 </div>
 
 <div class="review-kitty">
-  <h2 style="text-align: center; color: #ef51d2; margin-top: 20px;">Reviews of this Kitty</h2>
+  <h2 style="text-align: center; color: white; margin-top: 20px;">Reviews of this Kitty</h2>
   <ul>
     <% @kitty.reviews.each do |review| %>
       <li><h2><%= review.content %> Rating: <%= review.rating %></h2></li>
     <% end %>
   </ul>
-  <p><%= link_to "Add a review to this kitty", new_kitty_review_path(@kitty), :class=>"teach-btn btn button-landing sticky-bottom" %></p>
+  <div class="size-button" style="font-size: 50px;" >
+    <p><%= link_to "Add a review to this kitty :", new_kitty_review_path(@kitty), :class=>"teach-btn btn button-landing sticky-bottom"  %></p>
+
+  </div>
 </div>
 
 
