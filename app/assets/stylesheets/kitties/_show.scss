@@ -249,6 +249,7 @@ p {
 .booking-section h2{
   font-family: 'Roboto Condensed', sans-serif;
   font-weight: bolder;
+
 }
 
 
@@ -267,7 +268,7 @@ p {
   justify-content: center;
   flex-direction: column;
       position: relative;
-    top: 160px;
+    top: 15px;
   h2 {
     font-weight: bolder;
   }
@@ -297,8 +298,32 @@ position: relative;
 top: -290px;
 }
 
+.kitty-dash {
+  display: flex;
 
+justify-content: center;
 
+align-items: center;
+
+position: relative;
+
+top: 380px;
+
+height: 130px;
+
+width: 400px;
+
+left: 720px;
+
+}
+.kitty-dash img{
+    transform-origin:50% 50%;
+    animation:2s rotateRight infinite linear;
+}
+
+@keyframes rotateRight{
+    100%{ transform:rotate(360deg); }
+}
 //#############################################################
 // $bg: #2196F3;
 // $darkBlue: darken($bg, 30%);
