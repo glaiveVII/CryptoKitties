@@ -36,7 +36,7 @@ import Typed from 'typed.js';
 
 function loadDynamicText() {
   new Typed('#banner-typed-text', {
-    strings: ["Need a cocktail?", "Select a cocktail ! ", "And come order one ! "],
+    strings: ["Need a KITTY ?", "Select a one ! "],
     typeSpeed: 70,
     loop: true
   });
