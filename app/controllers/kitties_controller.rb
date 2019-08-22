@@ -76,6 +76,8 @@ class KittiesController < ApplicationController
   end
 
   def donate
+    @kitty = Kitty.new
+    authorize @kitty
   end
 
   private

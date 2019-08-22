@@ -33,7 +33,7 @@ import Typed from 'typed.js';
 
 function loadDynamicText() {
   new Typed('#banner-typed-text', {
-    strings: ["FEELING SAD ???", "YOU NEED TO RENT A KITTY ", "YOU ARE ON THE PLACE !"],
+    strings: ["FEELING SAD ???", "YOU NEED TO RENT A KITTY ", "YOU ARE ON THE GOOD PLACE !"],
     typeSpeed: 70,
     loop: true
   });
