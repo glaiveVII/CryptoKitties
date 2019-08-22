@@ -1,6 +1,11 @@
 <h1 style="text-align: center; color: #ef51d2; margin-top: 20px;" >New Kitty</h1>
 
-<%= render 'form', kitty: @kitty %>
 
-<%= link_to 'Back', kitties_path, :class=>"teach-btn btn button-landing sticky-bottom" %>
-<%= link_to 'Browse all kitties', kitties_path, :class=>"teach-btn btn button-landing sticky-bottom" %>
+<div class="wrapper" style="display: flex;   flex-direction: column;   align-items: center;
+">
+
+  <%= render 'form', kitty: @kitty %>
+
+  <%= link_to 'Back', kitties_path, :class=>"teach-btn btn button-landing sticky-bottom" %>
+  <%= link_to 'Browse all kitties', kitties_path, :class=>"teach-btn btn button-landing sticky-bottom" %>
+</div>
