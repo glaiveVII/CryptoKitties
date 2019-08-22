@@ -80,7 +80,7 @@
         </div>
       </div>
 <div class="buy-kitty">
-    <h2>Would you like to Purr-chase this Kitty?</h2>
+    <h2 style="text-align: center; color: #ef51d2; margin-top: 20px;">Would you like to Purr-chase this Kitty?</h2>
 
     <%= link_to "Book kitty", new_kitty_booking_path(@kitty), :class=>"teach-btn btn button-landing sticky-bottom"  %>
     <%= link_to "View booked Kitties", kitty_bookings_path(@kitty), :class=>"teach-btn btn button-landing sticky-bottom"%>
@@ -105,7 +105,7 @@
 </div>
 
 <div class="review-kitty">
-  <h2>Reviews of this Kitty</h2>
+  <h2 style="text-align: center; color: #ef51d2; margin-top: 20px;">Reviews of this Kitty</h2>
   <ul>
     <% @kitty.reviews.each do |review| %>
       <li><h2><%= review.content %> Rating: <%= review.rating %></h2></li>
