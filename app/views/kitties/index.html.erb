@@ -73,7 +73,20 @@
   <div class="main-button" style="margin:auto;">
 
     <%= link_to "¡ DO NOT CLICK HERE !", new_kitty_path, :class=>"button teach-btn btn button-landing sticky-bottom " %>
+        <!-- Normal HTML element to disintegrate -->
+    <button class="button">Button</button>
 
+    <script src="anime.min.js"></script>
+    <script src=".../javascript/plugins/particles.js"></script>
+    <script>
+        // Initialize a new instance of Particles to disintegrate/integrate the button
+        var particles = new Particles('.button');
+
+        // Disintegrate the button into particles
+        particles.disintegrate();
+
+        // particles.integrate(); // would do the opposite
+    </script>
   </div>
 
     <div
