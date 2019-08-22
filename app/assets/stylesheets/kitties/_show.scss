@@ -29,6 +29,7 @@ body {
 }
 
 .card {
+  margin-top: 50px;
   display: flex;
   height: 280px;
   width: 200px;
@@ -38,8 +39,8 @@ body {
 /*   margin-left: -50px; */
   transition: 0.4s ease-out;
   position: relative;
-  top: -300px;
-  left: 176px;
+  // top: -300px;
+  // left: 176px;
 }
  .show-card {
   margin-top: 30px;
