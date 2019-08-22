@@ -34,6 +34,10 @@ class KittyPolicy < ApplicationPolicy
     true
   end
 
+  def donate?
+    true
+  end
+
   def destroy?
     user.admin || record.owner == user
   end
