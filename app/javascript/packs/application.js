@@ -3,6 +3,7 @@ import 'mapbox-gl/dist/mapbox-gl.css'; // <-- you need to uncomment the styleshe
 import "../plugins/flatpickr"
 
 import { initMapbox } from '../plugins/init_mapbox';
+import { loadDynamicText } from '../plugins/init_mapbox';
 import { initSweetalert } from '../plugins/init_sweetalert';
 
 initSweetalert('.sweet-alert-demo', {
@@ -10,5 +11,8 @@ initSweetalert('.sweet-alert-demo', {
   text: "This is a great alert, isn't it?",
   icon: "success"
 });
+
+
 initMapbox();
 
+loadDynamicText();
