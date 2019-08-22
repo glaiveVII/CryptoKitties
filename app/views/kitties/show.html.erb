@@ -14,7 +14,13 @@
       </div>
     </div>
   </div>
+
 </div>
+
+  <div class="kitty-dash">
+    <img src="/assets/ethereum.png" style="height: 150px;">
+  </div>
+
 
 <div class="rectangle-info-show">
         <div class="wrapped-proposition">
@@ -53,27 +59,28 @@
         </div>
       </div>
 
-<div class="kitty-dash">
-  <img src="/assets/ethereum.png" style="height: 150px">
+
+<div class="wrapper" style="display: flex;   flex-direction: column;   align-items: center;
+">
+
+
+  <div class="buy-kitty">
+      <h2 style="text-align: center; color: #ef51d2; margin-top: 20px;">Would you like to Purr-chase this Kitty?</h2>
+
+      <%= link_to "Book kitty", new_kitty_booking_path(@kitty), :class=>"teach-btn btn button-landing sticky-bottom"  %>
+      <%= link_to "View booked Kitties", kitty_bookings_path(@kitty), :class=>"teach-btn btn button-landing sticky-bottom"%>
+  </div>
+
+
+  <div
+    id="map"
+    style="width: 40%;
+    height: 200px;"
+    data-markers="<%= @markers.to_json %>"
+    data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+  ></div>
+
 </div>
-
-
-
-<div class="buy-kitty">
-    <h2 style="text-align: center; color: #ef51d2; margin-top: 20px;">Would you like to Purr-chase this Kitty?</h2>
-
-    <%= link_to "Book kitty", new_kitty_booking_path(@kitty), :class=>"teach-btn btn button-landing sticky-bottom"  %>
-    <%= link_to "View booked Kitties", kitty_bookings_path(@kitty), :class=>"teach-btn btn button-landing sticky-bottom"%>
-</div>
-
-<div
-  id="map"
-  style="width: 40%;
-  height: 200px;"
-  data-markers="<%= @markers.to_json %>"
-  data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
-></div>
-
 <div class="header">
   <div id="showbc">
     <%= link_to 'Back to all Kitty page', kitties_path, :class=>"teach-btn btn button-landing sticky-bottom"%>
@@ -93,6 +100,8 @@
   </ul>
   <p><%= link_to "Add a review to this kitty", new_kitty_review_path(@kitty), :class=>"teach-btn btn button-landing sticky-bottom" %></p>
 </div>
+
+
 
 
 <!--Content before waves-->
@@ -123,3 +132,4 @@ viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
   </svg>
 </div>
 <!--Waves end-->
+
