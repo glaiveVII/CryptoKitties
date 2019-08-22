@@ -7,10 +7,11 @@ import { loadDynamicText } from '../plugins/init_mapbox';
 import { initSweetalert } from '../plugins/init_sweetalert';
 
 initSweetalert('.sweet-alert-demo', {
-  title: "A nice alert",
-  text: "This is a great alert, isn't it?",
+  title: "THANKS FOR YOUR FEEDBACK",
+  text: "This is a great KITTY, isn't it?",
   icon: "success"
 });
+
 
 
 initMapbox();
