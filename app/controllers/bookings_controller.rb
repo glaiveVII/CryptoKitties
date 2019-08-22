@@ -32,9 +32,9 @@ class BookingsController < ApplicationController
 
   def destroy
     @kitty = @booking.kitty
+    authorize @booking
     @booking.destroy
     redirect_to kitty_path(@kitty)
-    authorize @booking
   end
 
   private
