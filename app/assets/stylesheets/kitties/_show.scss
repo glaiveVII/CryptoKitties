@@ -146,15 +146,6 @@ svg {
   height: 100vh;
 }
 
-.show-card {
-
-}
-
-.grey-strip-show {
-
-}
-
-
 
 // WAVES WAVES WAVES
 body {
@@ -162,13 +153,14 @@ body {
 }
 
 h1 {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
   font-weight:300;
   letter-spacing: 2px;
   font-size:48px;
+  font-weight: bolder;
 }
 p {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
   letter-spacing: 1px;
   font-size:14px;
   color: #333333;
@@ -258,3 +250,179 @@ p {
   font-family: 'Roboto Condensed', sans-serif;
   font-weight: bolder;
 }
+
+
+#showbc {
+    display: flex;
+  justify-content: space-between;
+  padding: 0 30px;
+  width: 100%;
+}
+
+.buy-kitty {
+  width: 100%;
+  padding: 30px;
+   align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+      position: relative;
+    top: 160px;
+  h2 {
+    font-weight: bolder;
+  }
+}
+
+.review-kitty {
+  position: relative;
+  top: 165px;
+  h2 {
+    font-weight: bolder;
+  }
+}
+
+.rectangle-info-show {
+display: flex;
+align-items: center;
+justify-content: center;
+width: 1072px;
+height: 245px;
+left: 390px;
+top: 776px;
+background: #FFFFFF;
+border: 1px solid #C4C4C4;
+box-sizing: border-box;
+// border-radius: 30px;
+position: relative;
+top: -290px;
+}
+
+
+
+//#############################################################
+// $bg: #2196F3;
+// $darkBlue: darken($bg, 30%);
+// $size: 60px;
+// $time: 1s;
+// $list: 'top', 'right', 'left', 'bottom';
+
+// @mixin animation ($name) {
+//     @-webkit-keyframes #{$name} {@content;}
+//     @-moz-keyframes #{$name} {@content;}
+//     @-o-keyframes #{$name} {@content;}
+//     @keyframes #{$name} {@content;}
+// }
+
+// @mixin action ($x, $y, $ang) {
+//     -webkit-transform: translate($x, $y) rotate($ang);
+//     -ms-transform: translate($x, $y) rotate($ang);
+//     transform: translate($x, $y) rotate($ang);
+// }
+
+// @include animation (top) {
+//   15% {
+//     @include action(0, 0, 0);
+//   }
+//   60% {
+//     @include action(-$size/2, -$size/2, 20deg);
+//   }
+//   100% {
+//     @include action(0, 0, 90deg);
+//   }
+// }
+
+// @include animation (right) {
+//   15% {
+//     @include action(0, 0, 0);
+//   }
+//   60% {
+//     @include action($size/2, -$size/2, -20deg);
+//   }
+//   100% {
+//     @include action(0, 0, -90deg);
+//   }
+// }
+
+// @include animation (left) {
+//   15% {
+//     @include action(0, 0, 0);
+//   }
+//   60% {
+//     @include action(-$size/2, $size/2, -20deg);
+//   }
+//   100% {
+//     @include action(0, 0, -90deg);
+//   }
+// }
+
+// @include animation (bottom) {
+//   15% {
+//     @include action(0, 0, 0);
+//   }
+//   60% {
+//     @include action($size/2, $size/2, 20deg);
+//   }
+//   100% {
+//     @include action(0, 0, 90deg);
+//   }
+// }
+
+// html {
+//   height: 100%;
+// }
+
+// body {
+//   margin: 0;
+//   height: 100%;
+//   overflow: hidden;
+//   background: #000;
+//   background: -webkit-radial-gradient($darkBlue, #000);
+//   background: -o-radial-gradient($darkBlue, #000);
+//   background: -moz-radial-gradient($darkBlue, #000);
+//   background: radial-gradient($darkBlue, #000);
+
+//   .show-container {
+//     position: absolute;
+//     background: lighten($bg, 30%);
+//     width: $size;
+//     height: $size;
+//     left: 50%;
+//     margin-left: -$size/2;
+//     top: 50%;
+//     margin-top: -$size/2;
+//     -webkit-transform: rotate(45deg);
+//     -ms-transform: rotate(45deg);
+//     transform: rotate(45deg);
+//     cursor: pointer;
+
+//     &:hover .el {
+//       -webkit-animation-play-state: running;
+//       -moz-animation-play-state: running;
+//       -o-animation-play-state: running;
+//       animation-play-state: running;
+//     }
+
+//     .el {
+//       display: inline-block;
+//       width: $size/2;
+//       height: $size/2;
+//       background: $bg;
+//       float: left;
+//     }
+
+//     @each $side in $list{
+//       .#{$side} {
+//         -webkit-animation: #{$side} $time linear infinite;
+//         -moz-animation: #{$side} $time linear infinite;
+//         -o-animation: #{$side} $time linear infinite;
+//         animation: #{$side} $time linear infinite;
+//         -webkit-animation-play-state: paused;
+//         -moz-animation-play-state: paused;
+//         -o-animation-play-state: paused;
+//         animation-play-state: paused;
+//       }
+//     }
+//   }
+// }
+
+//################################################################
