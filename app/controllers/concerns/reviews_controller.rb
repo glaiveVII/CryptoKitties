@@ -1,1 +1,0 @@
-reviews_controller.rb
