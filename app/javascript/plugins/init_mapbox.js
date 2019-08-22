@@ -28,9 +28,6 @@ const initMapbox = () => {
   }
 };
 
-// sweet alert code
-
-
 
 import Typed from 'typed.js';
 
