@@ -112,4 +112,17 @@
 
 
 
+  <h1>ALL REVIEWS FOR THIS KITTY </h1>
+  <ul>
+    <% @kitty.reviews.each do |review| %>
+
+      <li><h2><%= review.content %> Rating: <%= review.rating %></h2></li>
+
+    <% end %>
+  </ul>
+
+  <p><%= link_to "Add a review to this kitty", new_kitty_review_path(@kitty), :class=>"teach-btn btn button-landing sticky-bottom" %></p>
+</div>
+
+
 

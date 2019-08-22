@@ -75,6 +75,10 @@ class KittiesController < ApplicationController
     redirect_to kitties_path
   end
 
+  def donate
+
+  end
+
   private
 
   def set_kitty
