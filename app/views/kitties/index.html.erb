@@ -57,21 +57,20 @@
 
 
     <div class="main-button" style="margin:auto;">
-      <%= link_to "¡ DO NOT CLICK HERE !", kitty_donate_path, :class=>"button teach-btn btn button-landing sticky-bottom " %>
+      <%= link_to "! DO NOT CLICK HERE !", kitty_donate_path, :class=>"button teach-btn btn button-landing sticky-bottom " %>
     </div>
 
   <br>
   <br>
 
-
-
-
   <div
     id="map"
-    style="width: 80%;
-    height: 300px;"
+    style="
+    height: 300px;
+    justify-content: center;"
     data-markers="<%= @markers.to_json %>"
     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+
    ></div>
 
 

@@ -2,11 +2,21 @@
 <br>
 <br>
 <br>
-<div class="wrapper" style="display: flex; justify-content: space-around;">
+<div class="wrapper" style="display: flex;   flex-direction: column;   align-items: center;
+">
 
   <%= image_tag "https://media.giphy.com/media/OSQnHQzntU8OKNaS6S/giphy.gif", style: 'height:200px ; width:200px; margin-left: 50px;' %>
+  <br>
+  <br>
   <%= image_tag "https://raw.githubusercontent.com/danielquinn/bitcoin-donate/master/screenshot.png", style: 'height:200px ; width:200px; margin-left: 50px;' %>
-
+  <br>
+  <br>
   <%= image_tag "https://media.giphy.com/media/MVgBbtMBGQTi6og4mF/giphy.gif", style: 'height:200px ; width:200px; margin-left: 50px;' %>
+  <br>
+  <br>
+  <div class="center-it" style="text-align: center; color: #ef51d2; font-size: 100%;">
+    <%= link_to "GO BACK", kitties_path, :class=>"teach-btn btn button-landing sticky-bottom", style: "font-size:200px;"  %>
+
+  </div>
 
 </div>
