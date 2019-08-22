@@ -2,10 +2,7 @@
 
 <%= render 'form', kitty: @kitty %>
 
-<%= link_to 'Show', @kitty, :class=>"btn btn-primary btn-gradient button-landing sticky-bottom" %>
-<%= link_to 'Back', root_path, :class=>"btn btn-primary btn-gradient button-landing sticky-bottom" %>
-<%= link_to 'Show all Kitties', kitties_path, :class=>"btn btn-primary btn-gradient button-landing sticky-bottom" %>
+<%= link_to 'Show', @kitty, :class=>"teach-btn btn button-landing sticky-bottom"  %>
+<%= link_to 'Back', root_path, :class=>"teach-btn btn button-landing sticky-bottom" %>
+<%= link_to 'Show all Kitties', kitties_path, :class=>"teach-btn btn button-landing sticky-bottom"  %>
 
-
-<button id="sweet-alert-demo" class="btn btn-danger">Delete <%= @kitty.public_key %></button>
-<%= link_to "", kitty_path(@kitty), method: :delete, id: "delete-link", class: "hidden" %>
