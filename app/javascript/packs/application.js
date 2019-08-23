@@ -11,6 +11,11 @@ initSweetalert('.sweet-alert-demo', {
   text: "This is a great KITTY, isn't it?",
   icon: "success"
 });
+initSweetalert('.sweet-alert-demo-2', {
+  title: "THANK YOU FOR YOUR FEEDBACK",
+  text: "This is a great KITTY, isn't it?",
+  icon: "success"
+});
 
 
 
