@@ -87,7 +87,7 @@
 </div>
 <div class="header">
   <div id="showbc">
-    <%= link_to 'Back to all Kitty page', kitties_path, :class=>"teach-btn btn button-landing sticky-bottom"%>
+    <%= link_to 'Back to all Kitties', kitties_path, :class=>"teach-btn btn button-landing sticky-bottom"%>
     <%= link_to "Back to home page", root_path, :class=>"teach-btn btn button-landing sticky-bottom" %>
     <% if policy(@kitty).destroy? %>
       <%= link_to 'Destroy', @kitty, method: :delete, :class=>"teach-btn btn button-landing sticky-bottom", data: { confirm: 'Are you sure you want to delete this lovely kitty ???' } %>
