@@ -7,7 +7,7 @@ import { loadDynamicText } from '../plugins/init_mapbox';
 import { initSweetalert } from '../plugins/init_sweetalert';
 
 initSweetalert('.sweet-alert-demo', {
-  title: "THANKS FOR YOUR FEEDBACK",
+  title: "YOUR PURR-FECT FRIEND HAS BEEN CREATED",
   text: "This is a great KITTY, isn't it?",
   icon: "success"
 });
