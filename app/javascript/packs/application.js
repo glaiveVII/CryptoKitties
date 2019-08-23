@@ -17,6 +17,34 @@ initSweetalert('.sweet-alert-demo-2', {
   icon: "success"
 });
 
+const randId = document.querySelector(".rand-id");
+const btn = document.querySelector("button");
+
+// Random number from 0 to length
+const randomNumber = (length) => {
+  return Math.floor(Math.random() * length)
+}
+
+// Generate Pseudo Random String, if safety is important use dedicated crypto/math library for less possible collisions!
+const generateID = (length) => {
+  const possible =
+    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+  let text = "";
+
+  for (let i = 0; i < length; i++) {
+    text += possible.charAt(randomNumber(possible.length));
+  }
+
+  return text;
+}
+
+randId.innerText = generateID(16);
+
+btn.addEventListener("click", () => {
+  randId.innerText = generateID(16);
+});
+
+
 
 
 initMapbox();
