@@ -7,6 +7,7 @@ class Kitty < ApplicationRecord
   validates :first_name, presence: true
   validates :last_name, presence: true
   validates :address, presence: true
+  mount_uploader :photo, PhotoUploader
 
   validates :price, presence: true
   validates :public_key, presence: true
