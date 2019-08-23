@@ -1,13 +1,12 @@
 puts 'Cleaning db'
 
-puts 'Cleaning Kitty'
-Kitty.destroy_all
-
 puts 'Cleaning booking'
 Booking.destroy_all
 
-puts 'Cleaning users'
+puts 'Cleaning Kitty'
+Kitty.destroy_all
 
+puts 'Cleaning users'
 User.destroy_all
 
 
@@ -46,7 +45,7 @@ url = ['https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.
   user.nickname = "#{user.first_name}#{user.last_name}"
   user.password = 123456789
   user.admin = false
-  user.save
+  user.save!
   kitty = Kitty.new(
     first_name: Faker::Creature::Cat.name,
     last_name: Faker::Creature::Cat.name,
@@ -55,18 +54,18 @@ url = ['https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.
 
   )
   kitty.remote_photo_url = url[i]
-  kitty.save
+  kitty.save!
   prices = [1,2,3,4,5,6,7,8]
   kitty.public_key = "sadlfgjd;fzgadjgjkls;fgjk"
   kitty.price = prices.sample
   kitty.owner = user
   # kitty.attributes = {}
 
-  kitty.save
+  kitty.save!
 end
 
 puts 'Seed done for kitty, user and booking'
-User.create(email: 'airtop@gmail.com', password: 'airtop',
+User.create!(email: 'airtop@gmail.com', password: 'airtop',
     first_name: Faker::Name.first_name,
     last_name: Faker::Name.last_name, nickname: "Paul")
 puts "Added the Airtop user to make thing easier"

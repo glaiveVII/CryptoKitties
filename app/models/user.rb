@@ -11,7 +11,7 @@ class User < ApplicationRecord
   # to change in view/device/registrations/new
   validates :first_name, presence: true
   validates :last_name, presence: true
-  validates :nickname, presence: true, uniqueness: true
+  validates :nickname, presence: true
 end
 
 # Rails:
