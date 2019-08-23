@@ -7,6 +7,7 @@ gem 'pg', '~> 0.21'
 gem 'puma'
 gem 'rails', '5.2.3'
 gem 'redis'
+gem 'carrierwave', '~> 1.2'
 
 # pundit gem
 gem 'pundit' # gem for implementing authorization
@@ -21,6 +22,7 @@ gem 'devise' # gem for implementing authentication
 
 #geocode gem
 gem 'geocoder'
+gem 'cloudinary', '~> 1.9.1'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
@@ -33,4 +35,5 @@ group :development, :test do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'dotenv-rails'
+  gem 'dotenv-rails', groups: [:development, :test]
 end

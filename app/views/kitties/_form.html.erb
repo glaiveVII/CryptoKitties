@@ -4,9 +4,22 @@
 
   <div class="form-inputs">
     <%= f.input :first_name %>
-    <%= f.input :last_name %>
-    <%= f.input :public_key %>
+    <%= f.input :last_name, :class=>"rand-id"%>
+    <a class="copy-text" id="copyTarget" >
+      <p style="font-size: 25px"> Your Kitties' public key : </p>
+      <p class="rand-id " style="text-align: center; font-size: 20px; color: #ef51d2;"> CLICK HERE TO GENERATE KEY  </p>
+      <button id="copyButton"  , class="teach-btn btn button-landing sticky-bottom rand-id">Copy your public key </button>
+    </a>
+
+    <!--   <input type="text" id="copyTarget" value=""> <button id="copyButton"  , class="teach-btn btn button-landing sticky-bottom rand-id"=>Copy your public key </button> -->
+
+    <%= f.input :public_key  %>
+
+
+
     <%= f.input :address %>
+    <%= f.input :photo %>
+    <%= f.input :photo_cache, as: :hidden %>
     <%= f.input :price, input_html: { value: kitty.price } %>
     <%= f.button :submit, :class=>"form-button teach-btn btn button-landing sticky-bottom sweet-alert-demo" %>
   </div>
