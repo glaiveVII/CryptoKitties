@@ -87,6 +87,6 @@ class KittiesController < ApplicationController
   end
 
   def kitty_params
-    params.require(:kitty).permit(:first_name, :last_name, :public_key, :price, :address)
+    params.require(:kitty).permit(:first_name, :last_name, :public_key, :price, :address, :photo)
   end
 end
