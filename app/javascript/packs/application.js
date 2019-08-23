@@ -38,18 +38,23 @@ const generateID = (length) => {
   return text;
 }
 
-randId.innerText = generateID(16);
-
-btn.addEventListener("click", () => {
+if (randId) {
   randId.innerText = generateID(16);
-});
 
-document.getElementById("copyButton").addEventListener("click", function() {
+  btn.addEventListener("click", () => {
+    randId.innerText = generateID(16);
+  });
+
+  document.getElementById("copyButton").addEventListener("click", function() {
     // copyToClipboard(document.getElementById("copyTarget"));
     const key = document.querySelector(".rand-id").innerText;
     const target = document.getElementById("kitty_public_key");
     target.value = key;
-});
+  });
+}
+
+
+
 
 function copyToClipboard(elem) {
     // create hidden text element, if it doesn't already exist
