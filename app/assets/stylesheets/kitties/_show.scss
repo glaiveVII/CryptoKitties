@@ -137,11 +137,6 @@ svg {
 
 }
 
-.container {
-
-}
-
-
 .family-foto {
   display: flex;
   justify-content: center;
@@ -273,10 +268,11 @@ p {
   justify-content: center;
   flex-direction: column;
       position: relative;
-    top: 15px;
+    top:-190px;
   h2 {
     color: black;
     font-weight: bolder;
+    font-size: 50px
   }
 }
 
@@ -331,129 +327,67 @@ left: 720px;
     100%{ transform:rotate(360deg); }
 }
 //#############################################################
-// $bg: #2196F3;
-// $darkBlue: darken($bg, 30%);
-// $size: 60px;
-// $time: 1s;
-// $list: 'top', 'right', 'left', 'bottom';
+.block
+{
+    margin: 50px auto;
+    height: 100px;
+    direction: rtl;
+    width: calc((100px + 2px) * 5);
+    position: absolute;
+    bottom: 0;
+    left: 6px;
+    right: 0;
+    top: -194px;
+}
 
-// @mixin animation ($name) {
-//     @-webkit-keyframes #{$name} {@content;}
-//     @-moz-keyframes #{$name} {@content;}
-//     @-o-keyframes #{$name} {@content;}
-//     @keyframes #{$name} {@content;}
-// }
+input[name='rating']
+{
+    display: none;
+}
 
-// @mixin action ($x, $y, $ang) {
-//     -webkit-transform: translate($x, $y) rotate($ang);
-//     -ms-transform: translate($x, $y) rotate($ang);
-//     transform: translate($x, $y) rotate($ang);
-// }
+.rating
+{
+    cursor: pointer;
+    background-image: url(http://res.cloudinary.com/dxosux4mm/image/upload/v1510484885/empty_znqc8l.svg) ;
+    background-size: cover;
+    height: 100px;
+    width: 50px;
+    display: inline-block;
+}
 
-// @include animation (top) {
-//   15% {
-//     @include action(0, 0, 0);
-//   }
-//   60% {
-//     @include action(-$size/2, -$size/2, 20deg);
-//   }
-//   100% {
-//     @include action(0, 0, 90deg);
-//   }
-// }
+.rating:nth-of-type(odd)
+{
+    background-position-x: -50px;
+    padding-right: 2px;
+    background-repeat: no-repeat;
+}
 
-// @include animation (right) {
-//   15% {
-//     @include action(0, 0, 0);
-//   }
-//   60% {
-//     @include action($size/2, -$size/2, -20deg);
-//   }
-//   100% {
-//     @include action(0, 0, -90deg);
-//   }
-// }
+.rating:hover,
+.rating:hover ~ .rating,
+.block:not(:hover) > input[name='rating']:checked ~ .rating
+{
+    background-image: url(http://res.cloudinary.com/dxosux4mm/image/upload/v1510484885/full_yu54wf.svg);
+}
 
-// @include animation (left) {
-//   15% {
-//     @include action(0, 0, 0);
-//   }
-//   60% {
-//     @include action(-$size/2, $size/2, -20deg);
-//   }
-//   100% {
-//     @include action(0, 0, -90deg);
-//   }
-// }
+.rating {
 
-// @include animation (bottom) {
-//   15% {
-//     @include action(0, 0, 0);
-//   }
-//   60% {
-//     @include action($size/2, $size/2, 20deg);
-//   }
-//   100% {
-//     @include action(0, 0, 90deg);
-//   }
-// }
+}
 
-// html {
-//   height: 100%;
-// }
+.rating:nth-of-type(odd):hover {
+  transform: scale(1.2) translateX(5px) rotate(2deg);
+  transition: transform 300ms ease-out;
+}
 
-// body {
-//   margin: 0;
-//   height: 100%;
-//   overflow: hidden;
-//   background: #000;
-//   background: -webkit-radial-gradient($darkBlue, #000);
-//   background: -o-radial-gradient($darkBlue, #000);
-//   background: -moz-radial-gradient($darkBlue, #000);
-//   background: radial-gradient($darkBlue, #000);
+.rating:nth-of-type(even):hover,
+.rating:nth-of-type(odd):hover + input + .rating {
+  transform: scale(1.2) translateX(-6px) rotate(-2deg);
+  transition: transform 300ms ease-out;
+}
+.teach-btn {
 
-//   .show-container {
-//     position: absolute;
-//     background: lighten($bg, 30%);
-//     width: $size;
-//     height: $size;
-//     left: 50%;
-//     margin-left: -$size/2;
-//     top: 50%;
-//     margin-top: -$size/2;
-//     -webkit-transform: rotate(45deg);
-//     -ms-transform: rotate(45deg);
-//     transform: rotate(45deg);
-//     cursor: pointer;
+  height: 50px;
 
-//     &:hover .el {
-//       -webkit-animation-play-state: running;
-//       -moz-animation-play-state: running;
-//       -o-animation-play-state: running;
-//       animation-play-state: running;
-//     }
+font-size: 25px;
 
-//     .el {
-//       display: inline-block;
-//       width: $size/2;
-//       height: $size/2;
-//       background: $bg;
-//       float: left;
-//     }
-
-//     @each $side in $list{
-//       .#{$side} {
-//         -webkit-animation: #{$side} $time linear infinite;
-//         -moz-animation: #{$side} $time linear infinite;
-//         -o-animation: #{$side} $time linear infinite;
-//         animation: #{$side} $time linear infinite;
-//         -webkit-animation-play-state: paused;
-//         -moz-animation-play-state: paused;
-//         -o-animation-play-state: paused;
-//         animation-play-state: paused;
-//       }
-//     }
-//   }
-// }
-
-//################################################################
+text-align: center;
+}

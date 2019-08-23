@@ -11,9 +11,13 @@ class BookingPolicy < ApplicationPolicy
 
   def show?
     true
+    # user.admin || record.owner == user
   end
 
   def destroy?
     user.admin || record.owner == user
+    # admin user can delete any booking
+    # or
+    # user can delete his own booking
   end
 end

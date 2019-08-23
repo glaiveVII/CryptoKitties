@@ -2,7 +2,7 @@
   <div class="family-foto" style="background-image: url('<%=asset_path 'familyfoto.png'%>')">
     <div class="card show-card">
       <h3 class="title"><%= @kitty.first_name %> <%= @kitty.last_name %></h3>
-      <div class="bar">
+    <div class="bar">
         <div class="emptybar"></div>
         <div class="filledbar"></div>
       </div>
@@ -57,10 +57,10 @@
           </ul>
         </div>
       </div>
-
+  <img tabindex="0" src="https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LDEPuIyx4-9-g-s2etn%2F-LVEgZYPv9AwH3sTz5hH%2F-LVEgbq_g_XAAFBXRW-U%2FCK_GitbookGraphics_v3-46.jpg?alt=media&amp;token=c349eec4-7062-4c04-934a-dea43295a475" class="imgTag-b489daf6" style="cursor: zoom-in; height: 700px; width: 100%;position: relative;top: -280px;">
 <div class="kitty-dash">
 <!--   <img src="/assets/ethereum.png" style="height: 150px"> -->
-  <img src="https://news.bitcoin.com/wp-content/uploads/2016/05/Ethereum-300x300.png" alt="ethereum" width="150" height="150">
+  <img src="https://news.bitcoin.com/wp-content/uploads/2016/05/Ethereum-300x300.png" alt="ethereum" width="320" height="320">
 </div>
 
 <div class="wrapper" style="display: flex;   flex-direction: column;   align-items: center;
@@ -103,6 +103,30 @@
   </ul>
   <div class="size-button" style="font-size: 50px;" >
     <p><%= link_to "Review this Kitty", new_kitty_review_path(@kitty), :class=>"teach-btn btn button-landing sticky-bottom"  %></p>
+
+          <div class="block">
+       <input type="radio" name="rating" id="rating-1"><!--
+    --><label for="rating-1" class="rating"></label><!--
+    --><input type="radio" name="rating" id="rating-2"><!--
+    --><label for="rating-2" class="rating"></label><!--
+    --><input type="radio" name="rating" id="rating-3" checked><!--
+    --><label for="rating-3" class="rating"></label><!--
+    --><input type="radio" name="rating" id="rating-4"><!--
+    --><label for="rating-4" class="rating"></label><!--
+    --><input type="radio" name="rating" id="rating-5"><!--
+    --><label for="rating-5" class="rating"></label><!--
+    --><input type="radio" name="rating" id="rating-6"><!--
+    --><label for="rating-6" class="rating"></label><!--
+    --><input type="radio" name="rating" id="rating-7"><!--
+    --><label for="rating-7" class="rating"></label><!--
+    --><input type="radio" name="rating" id="rating-8"><!--
+    --><label for="rating-8" class="rating"></label><!--
+    --><input type="radio" name="rating" id="rating-9"><!--
+    --><label for="rating-9" class="rating"></label><!--
+    --><input type="radio" name="rating" id="rating-10"><!--
+    --><label for="rating-10" class="rating"></label><!--
+    -->
+    </div>
 
   </div>
 </div>

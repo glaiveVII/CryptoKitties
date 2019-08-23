@@ -13,3 +13,13 @@ class User < ApplicationRecord
   validates :last_name, presence: true
   validates :nickname, presence: true, uniqueness: true
 end
+
+# Rails:
+# user = User.find_by(email: 'test@gmail.com')
+# user.bookings # is coming from has_many :bookings in the User model (user.rb)
+
+# user id: 1
+# bookings id: 1 user_id: 1
+# bookings id: 2 user_id: 1
+# bookings id: 3 user_id: 1
+
