@@ -285,19 +285,33 @@ p {
 }
 
 .rectangle-info-show {
-display: flex;
-align-items: center;
-justify-content: center;
-width: 1072px;
-height: 245px;
-left: 390px;
-top: 776px;
-background: #FFFFFF;
-border: 1px solid #C4C4C4;
-box-sizing: border-box;
-// border-radius: 30px;
-position: relative;
-top: -290px;
+// display: flex;
+// align-items: center;
+// justify-content: center;
+// width: 1072px;
+// height: 245px;
+// left: 390px;
+// top: 776px;
+// background: #FFFFFF;
+// border: 1px solid #C4C4C4;
+// box-sizing: border-box;
+// // border-radius: 30px;
+// position: relative;
+// top: -290px;
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+    width: 1072px;
+    height: 245px;
+    left: 201px;
+    top: 776px;
+    background: #FFFFFF;
+    border: 1px solid #C4C4C4;
+    box-sizing: border-box;
+    position: relative;
+    top: -311px;
 }
 
 .kitty-dash {
@@ -401,10 +415,21 @@ font-size: 25px;
 text-align: center;
 }
 
+.kitty-img {
+
+  vertical-align: middle;
+    border-style: none;
+    width: 255px;
+    position: relative;
+    border-radius: 10px;
+    left: 1px;
+}
+
 
 #eth {
 position: relative;
 top: -238px;
+left: -202px;
 margin: auto;
 }
 
@@ -416,6 +441,6 @@ background-image: url("http://i.stack.imgur.com/2OrtT.jpg");
 background-size: cover;
 background-repeat: no-repeat;
 background-position: 50% 50%;
-left: 395px;
+left: 200px;
 width: 1100px;
 }
