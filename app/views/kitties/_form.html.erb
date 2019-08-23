@@ -5,12 +5,13 @@
   <div class="form-inputs">
     <%= f.input :first_name %>
     <%= f.input :last_name, :class=>"rand-id"%>
-    <a class="copy-text">copy Text
+    <a class="copy-text" id="copyTarget" >
+
       <p class="rand-id " style="text-align: center; font-size: 20px; color: #ef51d2;"> CLICK HERE TO GENERATE KEY  </p>
-
+      <button id="copyButton"  , class="teach-btn btn button-landing sticky-bottom rand-id">Copy your public key </button>
     </a>
-    <input type="text" id="copyTarget" value="Text to Copy"> <button id="copyButton" class="teach-btn btn button-landing sticky-bottom">Copy</button><br><br>
 
+    <!--   <input type="text" id="copyTarget" value=""> <button id="copyButton"  , class="teach-btn btn button-landing sticky-bottom rand-id"=>Copy your public key </button> -->
 
     <%= f.input :public_key  %>
 

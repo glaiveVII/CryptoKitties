@@ -45,7 +45,10 @@ btn.addEventListener("click", () => {
 });
 
 document.getElementById("copyButton").addEventListener("click", function() {
-    copyToClipboard(document.getElementById("copyTarget"));
+    // copyToClipboard(document.getElementById("copyTarget"));
+    const key = document.querySelector(".rand-id").innerText;
+    const target = document.getElementById("kitty_public_key");
+    target.value = key;
 });
 
 function copyToClipboard(elem) {
