@@ -54,7 +54,6 @@ url = ['https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.
 
   )
   kitty.remote_photo_url = url[i]
-  kitty.save!
   prices = [1,2,3,4,5,6,7,8]
   kitty.public_key = "sadlfgjd;fzgadjgjkls;fgjk"
   kitty.price = prices.sample
