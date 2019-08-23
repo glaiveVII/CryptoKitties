@@ -79,7 +79,7 @@
   <div
     id="map"
     style="width: 40%;
-    height: 200px;"
+    height: 200px; margin: 30px 0px;"
     data-markers="<%= @markers.to_json %>"
     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
   ></div>
@@ -105,7 +105,7 @@
   <div class="size-button" style="font-size: 50px;" >
     <p><%= link_to "Review this Kitty", new_kitty_review_path(@kitty), :class=>"teach-btn btn button-landing sticky-bottom"  %></p>
 
-          <div class="block">
+        <div class="block">
        <input type="radio" name="rating" id="rating-1"><!--
     --><label for="rating-1" class="rating"></label><!--
     --><input type="radio" name="rating" id="rating-2"><!--
