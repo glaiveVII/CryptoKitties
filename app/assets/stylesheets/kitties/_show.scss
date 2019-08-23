@@ -268,7 +268,7 @@ p {
   justify-content: center;
   flex-direction: column;
       position: relative;
-    top:-190px;
+    top: -316px;
   h2 {
     color: black;
     font-weight: bolder;
@@ -369,10 +369,19 @@ input[name='rating']
     background-image: url(http://res.cloudinary.com/dxosux4mm/image/upload/v1510484885/full_yu54wf.svg);
 }
 
-.rating {
-
+#single-card-id {
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  left: 60px;
 }
-
+#single-card {
+  width: 258px;
+  #single-filledbard {
+    width: 213px;
+  }
+}
 .rating:nth-of-type(odd):hover {
   transform: scale(1.2) translateX(5px) rotate(2deg);
   transition: transform 300ms ease-out;
@@ -390,4 +399,23 @@ input[name='rating']
 font-size: 25px;
 
 text-align: center;
+}
+
+
+#eth {
+position: relative;
+top: -238px;
+margin: auto;
+}
+
+#fat-kitties {
+  position: relative;
+top: -280px;
+height: 726px;
+background-image: url("http://i.stack.imgur.com/2OrtT.jpg");
+background-size: cover;
+background-repeat: no-repeat;
+background-position: 50% 50%;
+left: 395px;
+width: 1100px;
 }

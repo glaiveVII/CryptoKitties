@@ -1,6 +1,9 @@
 
 <div class="grey-strip-show" style="background-image: url('/assets/multi-icon-strip-a59adcfe7b76762eb378902d7dfd84916270fd67cb8e27ec36df5e3bb7ecb779.png')">
   <div class="family-foto" style="background-image: url('<%=asset_path 'familyfoto.png'%>')">
+    <div id="single-card" class="card show-card">
+      <h3 id="single-card-id" class="title"><%= @kitty.first_name %> <%= @kitty.last_name %></h3>
+
     <div class="card show-card">
       <h3 class="title"><%= @kitty.first_name %> <%= @kitty.last_name %></h3>
 
@@ -9,7 +12,7 @@
       <h2 class="title" style="text-align: center; font-size: 20px; color: white; padding-top: 40px;"> Price : <%= @kitty.price%> eth</h2>
     <div class="bar">
         <div class="emptybar"></div>
-        <div class="filledbar"></div>
+        <div id="single-filledbard" class="filledbar"></div>
       </div>
       <%= cl_image_tag @kitty.photo, height: 280, width: 200, crop: :fill %>
       <div class="circle">
@@ -62,10 +65,10 @@
           </ul>
         </div>
       </div>
-  <img tabindex="0" src="https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LDEPuIyx4-9-g-s2etn%2F-LVEgZYPv9AwH3sTz5hH%2F-LVEgbq_g_XAAFBXRW-U%2FCK_GitbookGraphics_v3-46.jpg?alt=media&amp;token=c349eec4-7062-4c04-934a-dea43295a475" class="imgTag-b489daf6" style="cursor: zoom-in; height: 700px; width: 100%;position: relative;top: -280px;">
+  <img tabindex="0" id="fat-kitties" src="https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LDEPuIyx4-9-g-s2etn%2F-LVEgZYPv9AwH3sTz5hH%2F-LVEgbq_g_XAAFBXRW-U%2FCK_GitbookGraphics_v3-46.jpg?alt=media&amp;token=c349eec4-7062-4c04-934a-dea43295a475" class="imgTag-b489daf6">
 <div class="kitty-dash">
 <!--   <img src="/assets/ethereum.png" style="height: 150px"> -->
-  <img src="https://news.bitcoin.com/wp-content/uploads/2016/05/Ethereum-300x300.png" alt="ethereum" width="320" height="320">
+  <img id="eth" src="https://news.bitcoin.com/wp-content/uploads/2016/05/Ethereum-300x300.png" alt="ethereum" width="250" height="250">
 </div>
 
 <div class="wrapper" style="display: flex;   flex-direction: column;   align-items: center;

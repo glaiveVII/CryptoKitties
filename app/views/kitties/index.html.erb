@@ -36,15 +36,18 @@
             <%= link_to kitty, class: 'card' do %>
               <div>
                 <h3 class="title"><%= kitty.first_name %> <%= kitty.last_name %></h3>
-                <div class="bar">
-                  <div class="emptybar"></div>
-                  <div class="filledbar"></div>
-                </div>
-                <div class="circle">
-                      <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+                  <div class="bar">
+                   <div class="emptybar"></div>
+                    <div class="filledbar"></div>
+                      </div>
+                      <div class="circle">
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
                         <img class="golang" src="https://media1.giphy.com/media/WUVDEwPxTVJncK1tpL/giphy.gif?cid=790b76117465d7639b4910c58661247036622f77f289f466&amp;rid=giphy.gif">
                       <!-- <circle class="stroke" cx="60" cy="60" r="50"/> -->
                     </svg>
+                  </div>
+               </div>
+
                     </div>
                 <%= cl_image_tag kitty.photo, height: 280, width: 200, crop: :fill %>
               </div>
@@ -56,7 +59,7 @@
 
 
 
-    <div class="dont-do-it" style="margin:auto;">
+    <div class="dont-do-it" style="margin:auto; margin-bottom: 30px;">
       <%= link_to "! DO NOT CLICK HERE !", kitty_donate_path, :class=>"button teach-btn btn button-landing sticky-bottom " %>
     </div>
 
