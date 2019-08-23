@@ -38,6 +38,7 @@ const generateID = (length) => {
   return text;
 }
 
+randId.innerText = generateID(16);
 
 btn.addEventListener("click", () => {
   randId.innerText = generateID(16);
