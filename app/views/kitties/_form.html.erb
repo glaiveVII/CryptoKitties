@@ -1,4 +1,4 @@
-<%= simple_form_for(kitty) do |f| %>
+<%= simple_form_for(kitty, remote: true) do |f| %>
   <%= f.error_notification %>
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
@@ -8,9 +8,7 @@
     <%= f.input :public_key %>
     <%= f.input :address %>
     <%= f.input :price, input_html: { value: kitty.price } %>
+    <%= f.button :submit, :class=>"teach-btn btn button-landing sticky-bottom sweet-alert-demo" %>
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit, :class=>"teach-btn btn button-landing sticky-bottom" %>
-  </div>
 <% end %>
